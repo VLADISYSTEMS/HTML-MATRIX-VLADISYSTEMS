@@ -1,0 +1,39 @@
+[1️⃣ Creación Local]
+VS Code
+|
+|-> Carpeta: HTML-MATRIX-VLADISYSTEMS
+|-> Archivos: HTML, CSS, ejercicios, especficaciones.txt
+|
+v
+[2️⃣ Git Local]
+git init
+git add .
+git commit -m "Primer commit"
+|
+v
+[3️⃣ Conectar con GitHub]
+git remote add origin https://github.com/VLADISYSTEMS/HTML-MATRIX-VLADISYSTEMS.git
+|
+v
+[4️⃣ Push inicial]
+git push -u origin main --force
+(Sin merge, sin Vim, todo directo)
+|
+v
+[5️⃣ GitHub Repository]
+- Archivos visibles en GitHub
+- README + proyecto completo
+|
+v
+[6️⃣ Activar GitHub Pages]
+Settings → Pages → Branch: main → Folder: / (root) → Save
+|
+v
+[7️⃣ Proyecto Online]
+https://VLADISYSTEMS.github.io/HTML-MATRIX-VLADISYSTEMS/
+|
+v
+[8️⃣ Actualizaciones futuras]
+- Local: editar archivos en VS Code
+- Git: add → commit → push
+- GitHub Pages se actualiza automáticamente
