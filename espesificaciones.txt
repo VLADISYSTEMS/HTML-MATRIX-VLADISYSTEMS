@@ -1,0 +1,172 @@
+📌 PROYECTO DE APRENDIZAJE HTML – VLADISYSTEMS
+1️⃣ Objetivo del proyecto
+
+Dominar HTML desde cero hasta integración con CSS.
+
+Entender estructura, jerarquía y flujo web.
+
+Aprender flujo completo: código local → navegador → hosting → dominio → indexación → acceso global.
+
+Construir 30 ejercicios progresivos que cubren fundamentos, maquetación, formularios, proyectos guiados e integración visual.
+
+2️⃣ Estructura del proyecto
+
+Carpeta raíz: HTML-MATRIX-VLADISYSTEMS
+
+Subcarpetas por niveles de dificultad:
+
+Fundamentos (8 ejercicios)
+
+Maquetación y estructura visual (8 ejercicios)
+
+Formularios e interacción (5 ejercicios)
+
+Proyecto guiado (4 ejercicios)
+
+Integración con CSS y buenas prácticas (5 ejercicios)
+
+Cada ejercicio: archivo .html con nombre descriptivo.
+
+Archivos adicionales: README.txt o notas.txt con aprendizajes y observaciones.
+
+3️⃣ Conceptos clave que aprenderás
+
+Metadatos (metadata) → información sobre la página que no se ve, pero ayuda a buscadores y navegadores.
+
+Estructura básica HTML → <!DOCTYPE html>, <html>, <head>, <body>
+
+Etiquetas esenciales → <h1>–<h6>, <p>, <a>, <img>, <ul>, <ol>, <li>
+
+Maquetación → <div>, <section>, <header>, <footer>, clases e IDs (class, id)
+
+Formularios → <form>, <input>, <button> y validación básica
+
+Integración con CSS → estilos en línea, internos y externos, colores, fuentes, cajas y disposición visual
+
+Flujo completo de publicación → desde VS Code a GitHub Pages para acceso público
+
+4️⃣ Flujo completo del proyecto (Matrix-style)
+Paso	Acción	Entorno	Resultado
+1️⃣ Creación	Escribes código HTML en VS Code	Local	Nace la idea digital, constructo inicial
+2️⃣ Ejecución local	Abres el archivo en navegador	Local browser	Solo tú ves la simulación, aún dentro de tu Matrix
+3️⃣ Publicación	Subes archivo a un servidor / hosting	Hosting (GitHub Pages opcional)	Tu página ahora es accesible desde cualquier parte del mundo 🌍
+4️⃣ Dominio	Conexión del servidor a un nombre fácil	DNS global	Tu sitio obtiene identidad universal
+5️⃣ Indexación	Buscadores leen metadatos y rastrean contenido	Motores de búsqueda	Página registrada en la Web, visible oficialmente
+6️⃣ Navegación	Cualquier persona visita tu dominio	Mundo digital	Te integras al ecosistema universal de la web
+5️⃣ Recorrido de aprendizaje
+
+Nivel 1 – Fundamentos → primeros pasos, títulos, párrafos, listas, enlaces, imágenes.
+
+Nivel 2 – Maquetación → tablas, divisiones, secciones, clases, IDs, estructura visual.
+
+Nivel 3 – Formularios → inputs, botones, registro, contacto.
+
+Nivel 4 – Proyecto guiado → mini sitio 3-4 páginas enlazadas (Inicio, Nosotros, Servicios, Contacto).
+
+Nivel 5 – Integración CSS → diseño, colores, fuentes, cajas, landing pages y portfolio personal.
+
+6️⃣ Herramientas utilizadas
+
+VS Code → editor de código y ejecución local.
+
+Navegador web → Chrome, Edge o Firefox para pruebas.
+
+GitHub → repositorio remoto para subir y versionar ejercicios, opcional: usar GitHub Pages para hosting gratis.
+
+Notas y README → documentación de aprendizajes y referencias.
+
+7️⃣ Recomendaciones Tigre
+
+Mantén nombres claros y consistentes en archivos y carpetas.
+
+Crea README.txt o notas.txt en cada nivel para tus observaciones.
+
+Haz una prueba diaria: abrir, editar y visualizar cambios en navegador.
+
+Integra CSS desde Nivel 5 para ver tus páginas más profesionales.
+
+Publica en GitHub Pages cuando completes cada nivel para ver tu progreso en línea.
+
+Si quieres, tigre, puedo hacer un mini plan de estudio diario con los 30 ejercicios, exactamente qué hacer cada día para completar todo en 2 semanas y dominar HTML con flujo completo, VS Code y subida a GitHub 🌐🔥.
+
+¿Quieres que haga eso ahora?
+
+Tú dijiste:
+ok
+ChatGPT Plus
+
+¡Perfecto tigre 🐯💥! Vamos a armar tu plan de estudio diario de 2 semanas para completar los 30 ejercicios HTML y dominar el flujo completo: VS Code → navegador → GitHub.
+
+🗓️ PLAN DIARIO – APRENDIZAJE HTML MATRIX VLADISYSTEMS
+Semana 1 – Fundamentos y Maquetación básica
+Día	Nivel	Ejercicios	Objetivo Tigre
+1	Nivel 1	1.1 “Mi primera página” + 1.2 “Currículum simple”	Entender estructura HTML básica, etiquetas <h1>–<p> y VS Code local.
+2	Nivel 1	1.3 “Galería básica” + 1.4 “Lista de compras”	Practicar listas, imágenes y enlaces simples.
+3	Nivel 1	1.5 “Enlaces útiles” + 1.6 “Imágenes básicas”	Reforzar enlaces (<a>) e imágenes (<img>).
+4	Nivel 1	1.7 “Mi biografía” + 1.8 “Mi frase favorita”	Consolidar párrafos, títulos, estructura semántica.
+5	Nivel 2	2.1 “Página de noticias” + 2.2 “Menú restaurante”	Introducción a <div>, secciones, encabezados y maquetación simple.
+6	Nivel 2	2.3 “Ficha producto” + 2.4 “Tabla de calificaciones”	Tablas básicas y organización de contenido visual.
+7	Nivel 2	2.5 “Secciones blog” + 2.6 “Divisiones HTML”	Practicar <section> y <div> con IDs y clases.
+Semana 2 – Formularios, Proyecto guiado e integración CSS
+Día	Nivel	Ejercicios	Objetivo Tigre
+8	Nivel 2	2.7 “Encabezados y clases” + 2.8 “Portfolio simple”	Consolidar jerarquía y reutilización de clases e IDs.
+9	Nivel 3	3.1 “Formulario contacto” + 3.2 “Registro usuario”	Aprender <form>, <input> y botones.
+10	Nivel 3	3.3 “Encuesta opinión” + 3.4 “Login básico”	Formularios interactivos y validación simple.
+11	Nivel 3	3.5 “Feedback cliente”	Practicar envío de información y diseño de inputs.
+12	Nivel 4	4.1 “Home” + 4.2 “Nosotros”	Crear mini sitio enlazado: navegación entre páginas.
+13	Nivel 4	4.3 “Servicios” + 4.4 “Contacto”	Consolidar proyecto guiado completo, enlaces internos y estructura.
+14	Nivel 5	5.1 “Landing page sencilla” + 5.2 “Portfolio personal” + 5.3–5.5	Aplicar CSS, colores, fuentes, cajas y estilos externos; subir todo a GitHub Pages.
+Tips Tigre para máximo provecho
+
+Abrir VS Code en la carpeta HTML-MATRIX-VLADISYSTEMS y trabajar desde ahí.
+
+Guardar cambios diarios y verificar en navegador local.
+
+Subir cada nivel completado a GitHub para ver progreso en línea.
+
+Notas rápidas en README.txt sobre conceptos aprendidos.
+
+Revisar antes de avanzar: si un ejercicio falla, depura y entiende el error.
+
+
+HTML-MATRIX-VLADISYSTEMS/
+│
+├── NIVEL-1-Fundamentos/
+│   ├── Ejercicio-1.1-MiPrimeraPagina.html
+│   ├── Ejercicio-1.2-CurriculumSimple.html
+│   ├── Ejercicio-1.3-GaleriaBasica.html
+│   ├── Ejercicio-1.4-ListaCompras.html
+│   ├── Ejercicio-1.5-EnlacesUtiles.html
+│   ├── Ejercicio-1.6-ImagenesBasicas.html
+│   ├── Ejercicio-1.7-MiBiografia.html
+│   └── Ejercicio-1.8-MiFraseFavorita.html
+│
+├── NIVEL-2-Maquetacion/
+│   ├── Ejercicio-2.1-PaginaNoticias.html
+│   ├── Ejercicio-2.2-MenuRestaurante.html
+│   ├── Ejercicio-2.3-FichaProducto.html
+│   ├── Ejercicio-2.4-TablaCalificaciones.html
+│   ├── Ejercicio-2.5-SeccionesBlog.html
+│   ├── Ejercicio-2.6-DivisionesHTML.html
+│   ├── Ejercicio-2.7-EncabezadosYClases.html
+│   └── Ejercicio-2.8-PortfolioSimple.html
+│
+├── NIVEL-3-Formularios/
+│   ├── Ejercicio-3.1-FormularioContacto.html
+│   ├── Ejercicio-3.2-RegistroUsuario.html
+│   ├── Ejercicio-3.3-EncuestaOpinion.html
+│   ├── Ejercicio-3.4-LoginBasico.html
+│   └── Ejercicio-3.5-FeedbackCliente.html
+│
+├── NIVEL-4-Proyecto-Guiado/
+│   ├── Proyecto-4.1-Home.html
+│   ├── Proyecto-4.2-Nosotros.html
+│   ├── Proyecto-4.3-Servicios.html
+│   └── Proyecto-4.4-Contacto.html
+│
+└── NIVEL-5-Integracion-CSS/
+    ├── Ejercicio-5.1-LandingPageSencilla.html
+    ├── Ejercicio-5.2-PortfolioPersonal.html
+    ├── Ejercicio-5.3-TarjetaProductoEstilizada.html
+    ├── Ejercicio-5.4-PaginaBlogBasica.html
+    └── Ejercicio-5.5-MiniSitioCompleto.html
