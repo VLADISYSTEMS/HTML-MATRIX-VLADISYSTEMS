@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<!-- Documento HTML5 -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- Codificación UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Restaurante</title>
+    <style>
+        /* Estilos generales para todo el sitio */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff8f0;
+            color: #333;
+        }
+        /* Encabezado del restaurante */
+        header {
+            background-color: #ff6f3c;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        /* Barra de navegación */
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            background-color: #ff8a5c;
+            margin: 0;
+            padding: 10px 0;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        /* Contenido principal */
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        section h2 {
+            border-bottom: 2px solid #ff6f3c;
+            padding-bottom: 5px;
+            color: #ff6f3c;
+        }
+        /* Cada plato */
+        article {
+            background-color: #fff0e0;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        article h3 {
+            margin: 0 0 5px 0;
+        }
+        /* Pie de página */
+        footer {
+            background-color: #ff6f3c;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+        /* Estilos responsivos */
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                padding: 5px 0;
+            }
+            nav ul li {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Encabezado del restaurante -->
+        <h1>Restaurante El Tigre Gourmet</h1>
+    </header>
+
+    <nav>
+        <!-- Barra de navegación -->
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Menú</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Contenido principal: menú del restaurante -->
+
+        <section>
+            <!-- Categoría: Entradas -->
+            <h2>Entradas</h2>
+            <article>
+                <!-- Primer plato -->
+                <h3>Bruschetta</h3>
+                <p>Pan tostado con tomate, ajo y albahaca.</p>
+                <p>Precio: $5</p>
+            </article>
+            <article>
+                <!-- Segundo plato -->
+                <h3>Ensalada Caprese</h3>
+                <p>Tomate, mozzarella y albahaca fresca.</p>
+                <p>Precio: $6</p>
+            </article>
+        </section>
+
+        <section>
+            <!-- Categoría: Platos Principales -->
+            <h2>Platos Principales</h2>
+            <article>
+                <h3>Filete de Res</h3>
+                <p>Filete de res a la parrilla con vegetales.</p>
+                <p>Precio: $15</p>
+            </article>
+            <article>
+                <h3>Pasta Alfredo</h3>
+                <p>Pasta con salsa cremosa de queso parmesano.</p>
+                <p>Precio: $12</p>
+            </article>
+        </section>
+
+        <section>
+            <!-- Categoría: Postres -->
+            <h2>Postres</h2>
+            <article>
+                <h3>Tiramisú</h3>
+                <p>Delicioso tiramisú clásico italiano.</p>
+                <p>Precio: $7</p>
+            </article>
+            <article>
+                <h3>Helado de Vainilla</h3>
+                <p>Helado cremoso servido con chocolate caliente.</p>
+                <p>Precio: $5</p>
+            </article>
+        </section>
+
+        <section>
+            <!-- Categoría: Bebidas -->
+            <h2>Bebidas</h2>
+            <article>
+                <h3>Jugo Natural</h3>
+                <p>Jugo de frutas de temporada.</p>
+                <p>Precio: $3</p>
+            </article>
+            <article>
+                <h3>Café Espresso</h3>
+                <p>Café fuerte y aromático.</p>
+                <p>Precio: $2</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Pie de página con contacto y derechos de autor -->
+        <p>Contacto: contacto@eltigregourmet.com | Tel: 555-1234</p>
+        <p>&copy; 2025 Restaurante El Tigre Gourmet</p>
+    </footer>
+</body>
+</html>
