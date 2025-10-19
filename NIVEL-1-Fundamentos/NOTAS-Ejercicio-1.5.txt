@@ -1,0 +1,255 @@
+
+🧩 EJERCICIO 1.5 — Enlaces Útiles
+🎯 Objetivo
+
+Practicar enlaces (<a>), atributos como href, target, title y diferenciar entre enlaces internos (dentro del proyecto) y externos (páginas web).
+Se busca crear un pequeño listado de enlaces útiles para estudio o trabajo.
+
+🧱 Estructura semántica
+
+<header> → título de la página.
+
+<main> → lista de enlaces categorizados.
+
+<ul> → lista principal de enlaces.
+
+<li> → cada enlace individual.
+
+<a> → etiqueta de enlace, con atributos:
+
+href → URL destino
+
+target="_blank" → abrir en nueva pestaña (para externos)
+
+title → texto que aparece al pasar el cursor
+
+
+
+
+
+
+
+
+
+📋 Pseudocódigo (esquema lógico)
+Inicio página
+    Encabezado con título: "Enlaces Útiles"
+    Sección principal:
+        Subtítulo: "Educación"
+        Lista de enlaces internos y externos
+            - HTML tutorial (externo)
+            - CSS tutorial (externo)
+            - Ejercicios Nivel 1 (interno)
+        Subtítulo: "Herramientas"
+        Lista de enlaces
+            - GitHub (externo)
+            - VS Code (externo)
+    Pie de página:
+        Texto: "Ejercicio 1.5 - VLADISYSTEMS"
+Fin página
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1.5 - Enlaces Útiles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f4f4;
+        }
+        header, footer {
+            text-align: center;
+            color: #333;
+        }
+        h1 {
+            color: #009900;
+        }
+        ul {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+            list-style-type: square;
+        }
+        li {
+            margin: 5px 0;
+        }
+        a {
+            text-decoration: none;
+            color: #0066cc;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Enlaces Útiles 🔗</h1>
+    </header>
+
+    <main>
+        <h2>Educación</h2>
+        <ul>
+            <li>
+                <a href="https://www.w3schools.com/html/" target="_blank" title="Tutorial de HTML">HTML Tutorial</a>
+            </li>
+            <li>
+                <a href="https://www.w3schools.com/css/" target="_blank" title="Tutorial de CSS">CSS Tutorial</a>
+            </li>
+            <li>
+                <a href="Ejercicio-1.1-MiPrimeraPagina.html" title="Mi Primera Página">Ejercicios Nivel 1</a>
+            </li>
+        </ul>
+
+        <h2>Herramientas</h2>
+        <ul>
+            <li>
+                <a href="https://github.com/" target="_blank" title="Repositorio GitHub">GitHub</a>
+            </li>
+            <li>
+                <a href="https://code.visualstudio.com/" target="_blank" title="Editor Visual Studio Code">VS Code</a>
+            </li>
+        </ul>
+    </main>
+
+    <footer>
+        <p>Ejercicio 1.5 - VLADISYSTEMS</p>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<!-- Declara el documento como HTML5 -->
+<html lang="es">
+<!-- Elemento raíz del documento, con idioma español -->
+<head>
+    <!-- Metadatos de la página -->
+
+    <meta charset="UTF-8">
+    <!-- Codificación de caracteres UTF-8 para soportar acentos y símbolos -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hace que la página sea responsiva en dispositivos móviles -->
+
+    <title>Ejercicio 1.5 - Enlaces Útiles</title>
+    <!-- Título que aparece en la pestaña del navegador -->
+
+    <style>
+        /* Inicio del bloque CSS interno */
+
+        body {
+            font-family: Arial, sans-serif; /* Fuente principal y alternativa */
+            margin: 40px; /* Espacio exterior alrededor del contenido */
+            background-color: #f4f4f4; /* Color de fondo suave */
+        }
+
+        header, footer {
+            text-align: center; /* Centrar texto en encabezado y pie */
+            color: #333; /* Color de texto oscuro */
+        }
+
+        h1 {
+            color: #009900; /* Título principal en verde */
+        }
+
+        ul {
+            background: #fff; /* Fondo blanco para las listas */
+            padding: 20px; /* Espacio interno alrededor de los ítems */
+            border-radius: 12px; /* Bordes redondeados */
+            box-shadow: 0 0 5px rgba(0,0,0,0.1); /* Sombra sutil */
+            list-style-type: square; /* Viñetas cuadradas para los ítems */
+        }
+
+        li {
+            margin: 5px 0; /* Espacio entre cada ítem de lista */
+        }
+
+        a {
+            text-decoration: none; /* Quita subrayado por defecto */
+            color: #0066cc; /* Color azul para enlaces */
+        }
+
+        a:hover {
+            text-decoration: underline; /* Subrayado al pasar el cursor */
+        }
+
+        /* Fin del bloque CSS interno */
+    </style>
+</head>
+<body>
+    <!-- Cuerpo visible de la página -->
+
+    <header>
+        <!-- Encabezado de la página -->
+        <h1>Enlaces Útiles 🔗</h1>
+        <!-- Título principal con emoji para resaltar visualmente -->
+    </header>
+
+    <main>
+        <!-- Contenido principal -->
+
+        <h2>Educación</h2>
+        <!-- Subtítulo para la sección de educación -->
+
+        <ul>
+            <!-- Lista de enlaces educativos -->
+            <li>
+                <a href="https://www.w3schools.com/html/" target="_blank" title="Tutorial de HTML">
+                    HTML Tutorial
+                </a>
+                <!-- Enlace externo a tutorial de HTML, abre en nueva pestaña -->
+            </li>
+            <li>
+                <a href="https://www.w3schools.com/css/" target="_blank" title="Tutorial de CSS">
+                    CSS Tutorial
+                </a>
+                <!-- Enlace externo a tutorial de CSS -->
+            </li>
+            <li>
+                <a href="Ejercicio-1.1-MiPrimeraPagina.html" title="Mi Primera Página">
+                    Ejercicios Nivel 1
+                </a>
+                <!-- Enlace interno al Ejercicio 1.1 dentro del proyecto -->
+            </li>
+        </ul>
+
+        <h2>Herramientas</h2>
+        <!-- Subtítulo para la sección de herramientas -->
+
+        <ul>
+            <!-- Lista de enlaces a herramientas -->
+            <li>
+                <a href="https://github.com/" target="_blank" title="Repositorio GitHub">
+                    GitHub
+                </a>
+                <!-- Enlace externo a GitHub -->
+            </li>
+            <li>
+                <a href="https://code.visualstudio.com/" target="_blank" title="Editor Visual Studio Code">
+                    VS Code
+                </a>
+                <!-- Enlace externo a Visual Studio Code -->
+            </li>
+        </ul>
+    </main>
+
+    <footer>
+        <!-- Pie de página -->
+        <p>Ejercicio 1.5 - VLADISYSTEMS</p>
+        <!-- Texto identificando el ejercicio y el proyecto -->
+    </footer>
+</body>
+</html>

@@ -1,0 +1,167 @@
+🧺 EJERCICIO 1.8 — Mi Frase Favorita
+🎯 Objetivo
+
+Practicar el uso de elementos semánticos <header>, <main>, <footer> y la etiqueta <blockquote> para resaltar citas. Aplicar estilos CSS internos para diseño limpio y visualmente atractivo.
+
+🧱 Estructura semántica
+
+<header> → Título principal: “Mi Frase Favorita ✨”
+
+<main> → Contenido principal:
+
+<p> → Introducción a la frase
+
+<blockquote> → Cita destacada
+
+<footer> → Pie de página con referencia al ejercicio y VLADISYSTEMS
+
+<style> → CSS interno para colores, tipografía, espaciado y bloques destacados
+
+📋 Pseudocódigo (esquema lógico)
+Inicio página
+    Encabezado:
+        Mostrar título "Mi Frase Favorita ✨"
+    Sección principal:
+        Mostrar párrafo introductorio
+        Mostrar bloque de cita (blockquote) con frase favorita
+    Pie de página:
+        Texto "Ejercicio 1.8 - VLADISYSTEMS"
+Fin página
+
+
+
+
+
+💻 Código HTML limpio (sin documentación)
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1.8 - Mi Frase Favorita</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header, footer {
+            text-align: center;
+        }
+        h1 {
+            color: #0066cc;
+        }
+        blockquote {
+            font-style: italic;
+            border-left: 4px solid #0066cc;
+            margin: 20px 0;
+            padding-left: 15px;
+            color: #555;
+            background-color: #eef5fb;
+            border-radius: 6px;
+        }
+        p {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mi Frase Favorita ✨</h1>
+    </header>
+
+    <main>
+        <p>Esta es una frase que me inspira cada día:</p>
+        <blockquote>
+            "La disciplina es el puente entre tus metas y tus logros." – Jim Rohn
+        </blockquote>
+    </main>
+
+    <footer>
+        <p>Ejercicio 1.8 - VLADISYSTEMS</p>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+💻 Código HTML completo y documentado
+<!DOCTYPE html>
+<!-- Declara el documento como HTML5 -->
+<html lang="es">
+<!-- Idioma español -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Codificación UTF-8 para soportar acentos -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hace la página responsiva en móviles y tablets -->
+
+    <title>Ejercicio 1.8 - Mi Frase Favorita</title>
+    <!-- Título visible en la pestaña del navegador -->
+
+    <style>
+        /* Inicio CSS interno */
+
+        body {
+            font-family: Arial, sans-serif; /* Fuente general */
+            margin: 40px; /* Margen alrededor del contenido */
+            background-color: #f9f9f9; /* Fondo suave */
+            color: #333; /* Color de texto */
+        }
+
+        header, footer {
+            text-align: center; /* Centrar texto */
+        }
+
+        h1 {
+            color: #0066cc; /* Azul intenso para el título */
+        }
+
+        blockquote {
+            font-style: italic; /* Cursiva para la cita */
+            border-left: 4px solid #0066cc; /* Barra azul a la izquierda */
+            margin: 20px 0;
+            padding-left: 15px;
+            color: #555; /* Gris para la frase */
+            background-color: #eef5fb; /* Fondo ligero */
+            border-radius: 6px; /* Bordes redondeados */
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Mi Frase Favorita ✨</h1>
+        <!-- Título principal -->
+    </header>
+
+    <main>
+        <p>
+            Esta es una frase que me inspira cada día:
+        </p>
+
+        <blockquote>
+            "La disciplina es el puente entre tus metas y tus logros." – Jim Rohn
+        </blockquote>
+        <!-- Frase favorita destacada -->
+
+    </main>
+
+    <footer>
+        <p>Ejercicio 1.8 - VLADISYSTEMS</p>
+        <!-- Pie de página -->
+    </footer>
+
+</body>
+</html>

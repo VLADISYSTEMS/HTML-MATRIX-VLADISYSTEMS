@@ -1,0 +1,29 @@
+# 1️⃣ Agregar el archivo al área de staging
+git add NIVEL-1-Fundamentos/Ejercicio-1.7-MiBiografia.html
+
+# 2️⃣ Crear un commit con mensaje claro
+git commit -m "Agregar Ejercicio 1.7 - Mi Biografía"
+
+# 3️⃣ Subir los cambios al repositorio remoto
+git push origin main
+
+
+
+
+
+PS C:\Users\Vladimir\Desktop\HTML-MATRIX-VLADISYSTEMS> git add NIVEL-1-Fundamentos/Ejercicio-1.7-MiBiografia.html
+PS C:\Users\Vladimir\Desktop\HTML-MATRIX-VLADISYSTEMS> git commit -m "Agregar Ejercicio 1.7 - Mi Biografía"
+[main 3caedce] Agregar Ejercicio 1.7 - Mi Biografía
+ 1 file changed, 90 insertions(+)
+ create mode 100644 NIVEL-1-Fundamentos/Ejercicio-1.7-MiBiografia.html
+PS C:\Users\Vladimir\Desktop\HTML-MATRIX-VLADISYSTEMS> git push origin main
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 1.32 KiB | 1.32 MiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/VLADISYSTEMS/HTML-MATRIX-VLADISYSTEMS.git
+   1bd6a24..3caedce  main -> main
+PS C:\Users\Vladimir\Desktop\HTML-MATRIX-VLADISYSTEMS>

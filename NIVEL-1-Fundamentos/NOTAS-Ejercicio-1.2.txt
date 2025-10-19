@@ -1,0 +1,168 @@
+🧺 EJERCICIO 1.2 — Currículum Simple
+🎯 Objetivo
+
+Practicar listas ordenadas (<ol>) y no ordenadas (<ul>), encabezados (<h1>, <h2>), y organizar contenido personal de forma semántica y visualmente clara.
+
+🧱 Estructura semántica
+
+<header> → podría usarse para nombre y título (en este caso usamos <h1> directamente).
+
+<main> → contenido principal del currículum (formación, habilidades, experiencia).
+
+<ul> → lista de elementos relacionados (estudios, habilidades, experiencia).
+
+<li> → cada ítem dentro de las listas.
+
+<footer> → opcional para información de contacto o autor.
+
+📋 Pseudocódigo (esquema lógico)
+Inicio página
+    Encabezado principal:
+        Nombre completo
+    Sección: Formación Académica
+        Lista de estudios
+            - Técnico en Informática - IUT Venezuela
+            - Curso de Programación COBOL Moderno
+    Sección: Habilidades
+        Lista de habilidades
+            - HTML / CSS básico
+            - Git y GitHub
+            - Automatización y scripts
+    Sección: Experiencia
+        Lista de experiencias
+            - Más de 30 años en arreglos locativos
+            - 7 años como agente inmobiliario
+            - Músico formal y analista de sistemas
+Fin página
+
+💻 Código HTML sin documentación
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículum Simple - Nivel 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1 {
+            color: #0066cc;
+            text-align: center;
+        }
+        h2 {
+            color: #cc3399;
+            margin-top: 30px;
+        }
+        ul {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+            list-style-type: disc;
+        }
+        li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vladimir Alba</h1>
+
+    <h2>Formación Académica</h2>
+    <ul>
+        <li>Técnico en Informática - IUT Venezuela</li>
+        <li>Curso de Programación COBOL Moderno</li>
+    </ul>
+
+    <h2>Habilidades</h2>
+    <ul>
+        <li>HTML / CSS básico</li>
+        <li>Git y GitHub</li>
+        <li>Automatización y scripts</li>
+    </ul>
+
+    <h2>Experiencia</h2>
+    <ul>
+        <li>Más de 30 años en arreglos locativos</li>
+        <li>7 años como agente inmobiliario</li>
+        <li>Músico formal y analista de sistemas</li>
+    </ul>
+</body>
+</html>
+
+💻 Código HTML documentado línea a línea
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- Codificación UTF-8 para soportar acentos y caracteres especiales -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hace la página responsiva para móviles y tablets -->
+
+    <title>Currículum Simple - Nivel 1</title>
+    <!-- Título que aparece en la pestaña del navegador -->
+
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Fuente principal */
+            margin: 40px; /* Margen alrededor de la página */
+            background-color: #f9f9f9; /* Fondo claro */
+            color: #333; /* Color de texto */
+        }
+
+        h1 {
+            color: #0066cc; /* Azul para el nombre */
+            text-align: center; /* Centra el título */
+        }
+
+        h2 {
+            color: #cc3399; /* Color diferente para secciones */
+            margin-top: 30px; /* Espacio superior */
+        }
+
+        ul {
+            background: #fff; /* Fondo blanco */
+            padding: 20px; /* Espacio interior */
+            border-radius: 12px; /* Bordes redondeados */
+            box-shadow: 0 0 5px rgba(0,0,0,0.1); /* Sombra ligera */
+            list-style-type: disc; /* Viñetas clásicas */
+        }
+
+        li {
+            margin: 5px 0; /* Separación entre elementos de lista */
+        }
+    </style>
+</head>
+<body>
+    <h1>Vladimir Alba</h1>
+    <!-- Encabezado principal con el nombre -->
+
+    <h2>Formación Académica</h2>
+    <!-- Sección de estudios -->
+    <ul>
+        <li>Técnico en Informática - IUT Venezuela</li>
+        <li>Curso de Programación COBOL Moderno</li>
+    </ul>
+
+    <h2>Habilidades</h2>
+    <!-- Sección de habilidades -->
+    <ul>
+        <li>HTML / CSS básico</li>
+        <li>Git y GitHub</li>
+        <li>Automatización y scripts</li>
+    </ul>
+
+    <h2>Experiencia</h2>
+    <!-- Sección de experiencia -->
+    <ul>
+        <li>Más de 30 años en arreglos locativos</li>
+        <li>7 años como agente inmobiliario</li>
+        <li>Músico formal y analista de sistemas</li>
+    </ul>
+</body>
+</html>

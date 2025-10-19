@@ -1,0 +1,221 @@
+🧩 EJERCICIO 1.6 — Imágenes Básicas
+🎯 Objetivo
+
+Practicar inserción de imágenes (<img>), atributos como:
+
+src → ruta de la imagen
+
+alt → texto alternativo
+
+width / height → dimensiones opcionales
+
+<figure> + <figcaption> → semántica para pies de foto
+
+🧱 Estructura semántica
+
+<header> → título de la página
+
+<main> → contenedor de imágenes
+
+<figure> → contenedor de cada imagen
+
+<figcaption> → texto descriptivo de la imagen
+
+<footer> → pie de página
+
+📋 Pseudocódigo (esquema lógico)
+Inicio página
+    Encabezado con título: "Imágenes Básicas"
+    Sección principal:
+        Imagen 1: Logo VLADISYSTEMS
+            Figura con pie: "Logo VLADISYSTEMS"
+        Imagen 2: Paisaje ejemplo
+            Figura con pie: "Paisaje"
+        Imagen 3: Foto de ejemplo
+            Figura con pie: "Foto de muestra"
+    Pie de página:
+        Texto: "Ejercicio 1.6 - VLADISYSTEMS"
+Fin página
+
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1.6 - Imágenes Básicas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f9f9f9;
+        }
+
+        header, footer {
+            text-align: center;
+            color: #333;
+        }
+
+        h1 {
+            color: #cc6600;
+        }
+
+        figure {
+            display: inline-block;
+            margin: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 6px;
+        }
+
+        figcaption {
+            margin-top: 8px;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Imágenes Básicas 🖼️</h1>
+    </header>
+
+    <main>
+
+        <figure>
+            <img src="logo-vladisystems.png" alt="Logo VLADISYSTEMS">
+            <figcaption>Logo VLADISYSTEMS</figcaption>
+        </figure>
+
+        <figure>
+            <img src="Imagen1.jpg" alt="Paisaje ejemplo">
+            <figcaption>Paisaje</figcaption>
+        </figure>
+
+        <figure>
+            <img src="Imagen2.jpg" alt="Foto de muestra">
+            <figcaption>Foto de muestra</figcaption>
+        </figure>
+
+    </main>
+
+    <footer>
+        <p>Ejercicio 1.6 - VLADISYSTEMS</p>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+💻 Código HTML completo y documentado línea por línea
+<!DOCTYPE html>
+<!-- Declara el documento como HTML5 -->
+<html lang="es">
+<!-- Documento HTML en español -->
+<head>
+    <meta charset="UTF-8">
+    <!-- Codificación UTF-8 para soportar acentos y caracteres especiales -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hace la página responsiva en móviles -->
+
+    <title>Ejercicio 1.6 - Imágenes Básicas</title>
+    <!-- Título visible en la pestaña del navegador -->
+
+    <style>
+        /* Inicio CSS interno */
+
+        body {
+            font-family: Arial, sans-serif; /* Fuente general */
+            margin: 40px;
+            background-color: #f9f9f9; /* Fondo suave */
+        }
+
+        header, footer {
+            text-align: center;
+            color: #333; /* Texto oscuro */
+        }
+
+        h1 {
+            color: #cc6600; /* Color naranja para el título */
+        }
+
+        figure {
+            display: inline-block; /* Muestra las figuras una al lado de la otra si hay espacio */
+            margin: 20px;
+            border: 1px solid #ddd; /* Borde gris claro */
+            border-radius: 10px; /* Bordes redondeados */
+            padding: 10px; /* Espacio interior */
+            background-color: #fff; /* Fondo blanco */
+            box-shadow: 0 0 5px rgba(0,0,0,0.1); /* Sombra sutil */
+            text-align: center;
+        }
+
+        img {
+            max-width: 200px; /* Limita ancho máximo */
+            height: auto; /* Mantiene proporción */
+            border-radius: 6px; /* Bordes redondeados de la imagen */
+        }
+
+        figcaption {
+            margin-top: 8px; /* Espacio entre imagen y pie */
+            font-size: 0.9em; /* Tamaño de letra más pequeño */
+            color: #555; /* Gris oscuro para el pie */
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Cuerpo visible -->
+
+    <header>
+        <h1>Imágenes Básicas 🖼️</h1>
+        <!-- Título principal con emoji de imagen -->
+    </header>
+
+    <main>
+        <!-- Contenedor principal de imágenes -->
+
+        <figure>
+            <!-- Primera imagen: logo -->
+            <img src="../logo-vladisystems.png" alt="Logo VLADISYSTEMS">
+            <figcaption>Logo VLADISYSTEMS</figcaption>
+        </figure>
+
+        <figure>
+            <!-- Segunda imagen de ejemplo -->
+            <img src="Imagen1.jpg" alt="Paisaje ejemplo">
+            <figcaption>Paisaje</figcaption>
+        </figure>
+
+        <figure>
+            <!-- Tercera imagen de ejemplo -->
+            <img src="Imagen2.jpg" alt="Foto de muestra">
+            <figcaption>Foto de muestra</figcaption>
+        </figure>
+
+    </main>
+
+    <footer>
+        <p>Ejercicio 1.6 - VLADISYSTEMS</p>
+        <!-- Pie de página -->
+    </footer>
+</body>
+</html>

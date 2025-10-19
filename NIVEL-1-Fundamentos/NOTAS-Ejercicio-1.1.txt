@@ -1,0 +1,148 @@
+🧺 EJERCICIO 1.1 — Mi Primera Página HTML
+
+🎯 Objetivo:
+Aprender la estructura básica de una página HTML: etiquetas <html>, <head>, <body>, encabezados, párrafos, listas, enlaces e imágenes.
+
+🧱 Estructura semántica
+
+<html> → elemento raíz.
+
+<head> → contiene metadatos (charset, viewport, título).
+
+<body> → contenido visible.
+
+<h1>, <h2> → encabezados.
+
+<p> → párrafos.
+
+<ul>, <ol> → listas desordenadas y ordenadas.
+
+<li> → cada ítem de la lista.
+
+<a> → enlaces.
+
+<img> → imágenes.
+
+📋 Pseudocódigo
+Inicio página
+    Encabezado principal <h1>: "¡Hola mundo! 🌎"
+    Párrafo introductorio <p>
+    Subtítulo <h2>: "Lista de cosas que me gustan"
+    Lista desordenada <ul> con ítems <li>: HTML, CSS, JavaScript
+    Subtítulo <h2>: "Pasos para seguir aprendiendo"
+    Lista ordenada <ol> con ítems <li>:
+        - Practicar ejercicios Nivel 1
+        - Aprender etiquetas de Nivel 2
+        - Subir mis páginas a GitHub Pages
+    Párrafo con enlace <a> a GitHub Pages
+    Imagen <img> del logo
+Fin página
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primera página HTML Nivel 1</title>
+</head>
+<body>
+    <h1>¡Hola mundo! 🌎</h1>
+    <p>Esta es mi primera página escrita con HTML. (first step!)</p>
+
+    <h2>Lista de cosas que me gustan:</h2>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <h2>Pasos para seguir aprendiendo:</h2>
+    <ol>
+        <li>Practicar ejercicios Nivel 1</li>
+        <li>Aprender etiquetas de Nivel 2</li>
+        <li>Subir mis páginas a GitHub Pages</li>
+    </ol>
+
+    <p>
+        Visita mi 
+        <a href="https://github.com/VLADISYSTEMS/HTML-MATRIX-VLADISYSTEMS" target="_blank">
+        proyecto en GitHub Pages
+        </a>
+    </p>
+
+    <img src="../logo-vladisystems.png" alt="Logo VLADISYSTEMS" width="150">
+</body>
+</html>
+
+
+
+
+
+💻 Código HTML con documentación línea por línea
+<!DOCTYPE html>
+<!-- Define el tipo de documento como HTML5 -->
+<html lang="es">
+<!-- Elemento raíz; idioma español -->
+
+<head>
+    <!-- Cabecera con metadatos -->
+    <meta charset="UTF-8">
+    <!-- Codificación UTF-8 para soportar acentos y emojis -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Escalado responsivo para móviles y tablets -->
+    
+    <title>Mi primera página HTML Nivel 1</title>
+    <!-- Título visible en la pestaña del navegador -->
+</head>
+
+<body>
+    <!-- Cuerpo visible de la página -->
+
+    <h1>¡Hola mundo! 🌎</h1>
+    <!-- Encabezado principal -->
+
+    <p>Esta es mi primera página escrita con HTML. (first step!)</p>
+    <!-- Párrafo introductorio -->
+
+    <h2>Lista de cosas que me gustan:</h2>
+    <!-- Subtítulo secundario -->
+
+    <ul>
+        <!-- Lista desordenada -->
+        <li>HTML</li>
+        <!-- Ítem 1 -->
+        <li>CSS</li>
+        <!-- Ítem 2 -->
+        <li>JavaScript</li>
+        <!-- Ítem 3 -->
+    </ul>
+
+    <h2>Pasos para seguir aprendiendo:</h2>
+    <!-- Segundo subtítulo -->
+
+    <ol>
+        <!-- Lista ordenada -->
+        <li>Practicar ejercicios Nivel 1</li>
+        <!-- Paso 1 -->
+        <li>Aprender etiquetas de Nivel 2</li>
+        <!-- Paso 2 -->
+        <li>Subir mis páginas a GitHub Pages</li>
+        <!-- Paso 3 -->
+    </ol>
+
+    <p>
+        Visita mi 
+        <a href="https://github.com/VLADISYSTEMS/HTML-MATRIX-VLADISYSTEMS" target="_blank">
+        proyecto en GitHub Pages
+        </a>
+    </p>
+    <!-- Párrafo con enlace externo -->
+
+    <img src="../logo-vladisystems.png" alt="Logo VLADISYSTEMS" width="150">
+    <!-- Imagen del logo con ancho de 150px -->
+</body>
+
+</html>
+<!-- Fin del documento -->

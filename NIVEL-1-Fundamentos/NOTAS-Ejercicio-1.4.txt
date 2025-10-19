@@ -1,0 +1,213 @@
+🧺 EJERCICIO 1.4 — Lista de Compras
+🎯 Objetivo
+
+Practicar listas ordenadas (<ol>) y no ordenadas (<ul>), comprender su estructura y cómo anidar elementos <li>.
+Se busca crear una lista de compras limpia, legible y con un poco de estilo interno (CSS).
+
+🧱 Estructura semántica
+
+<header> → título de la página.
+
+<main> → contenido principal (la lista).
+
+<footer> → pie con autor o fecha.
+
+<ul> → lista de compras.
+
+<li> → cada ítem (producto).
+
+<strong> o <em> → destacar palabras clave.
+
+
+
+
+
+📋 Pseudocódigo (esquema lógico)
+Inicio página
+    Encabezado con título: "Mi Lista de Compras"
+    Sección principal:
+        Subtítulo: "Supermercado"
+        Lista sin orden (ul)
+            - Pan integral
+            - Leche descremada
+            - Huevos orgánicos
+            - Café molido
+            - Queso fresco
+        Subtítulo: "Limpieza"
+        Lista sin orden (ul)
+            - Jabón líquido
+            - Papel higiénico
+            - Detergente
+    Pie de página:
+        Texto: "Ejercicio 1.4 - VLADISYSTEMS"
+Fin página
+
+
+
+
+
+💻 Código HTML sugerido (con comentarios)
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1.4 - Lista de Compras</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f9f9f9;
+        }
+        header, footer {
+            text-align: center;
+            color: #333;
+        }
+        h1 {
+            color: #0066cc;
+        }
+        ul {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mi Lista de Compras 🛒</h1>
+    </header>
+
+    <main>
+        <h2>Supermercado</h2>
+        <ul>
+            <li>Pan integral</li>
+            <li>Leche descremada</li>
+            <li>Huevos orgánicos</li>
+            <li>Café molido</li>
+            <li>Queso fresco</li>
+        </ul>
+
+        <h2>Limpieza</h2>
+        <ul>
+            <li>Jabón líquido</li>
+            <li>Papel higiénico</li>
+            <li>Detergente</li>
+        </ul>
+    </main>
+
+    <footer>
+        <p>Ejercicio 1.4 - VLADISYSTEMS</p>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<!-- Declara el tipo de documento HTML5 -->
+<html lang="es">
+<!-- Elemento raíz; atributo lang indica que el contenido está en español -->
+<head>
+    <!-- Contenedor de metadatos (no visibles directamente en la página) -->
+    <meta charset="UTF-8">
+    <!-- Define la codificación de caracteres (UTF-8) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hace la página responsiva: escala la anchura al dispositivo -->
+    <title>Ejercicio 1.4 - Lista de Compras</title>
+    <!-- Título que aparece en la pestaña del navegador -->
+    <style>
+        /* Inicio del bloque CSS interno */
+
+        /* Aplica tipografía, margen general y color de fondo a toda la página */
+        body {
+            font-family: Arial, sans-serif; /* Fuente primaria y alternativa */
+            margin: 40px; /* Espacio exterior alrededor del contenido */
+            background-color: #f9f9f9; /* Color de fondo suave */
+        }
+
+        /* Estilos compartidos para header y footer: alineado y color de texto */
+        header, footer {
+            text-align: center; /* Centra el texto horizontalmente */
+            color: #333; /* Color de texto oscuro para contraste */
+        }
+
+        /* Estilo del título principal */
+        h1 {
+            color: #0066cc; /* Azul para destacar el título */
+        }
+
+        /* Estilos para las listas no ordenadas (ul) como tarjetas blancas */
+        ul {
+            background: #fff; /* Fondo blanco para la caja de la lista */
+            padding: 20px; /* Espacio interior alrededor de los ítems */
+            border-radius: 12px; /* Bordes redondeados para estética */
+            box-shadow: 0 0 5px rgba(0,0,0,0.1); /* Sombra sutil */
+        }
+
+        /* Espacio entre cada elemento de lista */
+        li {
+            margin: 5px 0; /* 5px arriba y abajo, 0 a los lados */
+        }
+
+        /* Fin del bloque CSS interno */
+    </style>
+</head>
+<body>
+    <!-- Cuerpo visible de la página -->
+
+    <header>
+        <!-- Encabezado de la página: contiene el título principal -->
+        <h1>Mi Lista de Compras 🛒</h1>
+        <!-- Título principal: usa emoji para dar tono informal y visual -->
+    </header>
+
+    <main>
+        <!-- Contenedor semántico para el contenido principal -->
+
+        <h2>Supermercado</h2>
+        <!-- Subtítulo de sección: productos de supermercado -->
+
+        <ul>
+            <!-- Lista no ordenada: cada <li> es un ítem de compra -->
+            <li>Pan integral</li>
+            <!-- Ítem 1: pan integral -->
+            <li>Leche descremada</li>
+            <!-- Ítem 2: leche descremada -->
+            <li>Huevos orgánicos</li>
+            <!-- Ítem 3: huevos orgánicos -->
+            <li>Café molido</li>
+            <!-- Ítem 4: café molido -->
+            <li>Queso fresco</li>
+            <!-- Ítem 5: queso fresco -->
+        </ul>
+
+        <h2>Limpieza</h2>
+        <!-- Segunda sección: productos de limpieza -->
+
+        <ul>
+            <!-- Otra lista para agrupar ítems de limpieza -->
+            <li>Jabón líquido</li>
+            <!-- Ítem: jabón líquido -->
+            <li>Papel higiénico</li>
+            <!-- Ítem: papel higiénico -->
+            <li>Detergente</li>
+            <!-- Ítem: detergente -->
+        </ul>
+    </main>
+
+    <footer>
+        <!-- Pie de página: información de autor/ejercicio -->
+        <p>Ejercicio 1.4 - VLADISYSTEMS</p>
+        <!-- Texto del footer: identifica el ejercicio y el proyecto -->
+    </footer>
+</body>
+</html>
+
