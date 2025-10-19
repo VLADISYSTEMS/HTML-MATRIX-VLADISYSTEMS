@@ -1,44 +1,79 @@
 <!DOCTYPE html>
-<!-- Declaramos que este documento es HTML5 -->
 <html lang="es">
-<!-- Abrimos la etiqueta <html> y definimos el idioma como español -->
-
 <head>
-    <!-- Información que no se muestra directamente en la página -->
-
     <meta charset="UTF-8">
-    <!-- Definimos la codificación de caracteres como UTF-8 para soportar acentos y caracteres especiales -->
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Hacemos que la página sea responsiva, ajustándose a dispositivos móviles -->
-
     <title>Ejercicio 1.3 - Galería Básica</title>
-    <!-- Título que aparecerá en la pestaña del navegador -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .galeria {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap; /* Permite que las imágenes bajen automáticamente si no caben en la fila */
+        }
+
+        figure {
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        img {
+            width: 100%;
+            max-width: 200px; /* Tamaño máximo en escritorio */
+            height: auto;
+            border-radius: 5px;
+        }
+
+        figcaption {
+            margin-top: 8px;
+            font-weight: bold;
+        }
+
+        /* CSS responsive para móviles */
+        @media (max-width: 600px) {
+            .galeria {
+                flex-direction: column; /* Apila imágenes verticalmente */
+                align-items: center;    /* Centra figuras */
+            }
+
+            img {
+                max-width: 80%; /* Ocupa hasta el 80% del ancho del móvil */
+            }
+        }
+    </style>
 </head>
-
 <body>
-    <!-- Contenido visible de la página -->
-
     <h1>Ejercicio 1.3 - Galería Básica</h1>
-    <!-- Encabezado principal de la página -->
-
     <p>Galería de imágenes con ejemplos del Nivel 1</p>
-    <!-- Breve descripción de la galería -->
 
     <div class="galeria">
-        <!-- Contenedor de las imágenes, se puede usar luego para aplicar estilos CSS -->
+        <figure>
+            <img src="Imagen1.jpg" alt="Imagen 1">
+            <figcaption>Imagen 1</figcaption>
+        </figure>
 
-        <img src="NIVEL-1-Fundamentos/imagen1.jpg" alt="Imagen 1" width="200">
-        <!-- Imagen 1: src apunta a la ruta relativa de la imagen dentro de Nivel-1-Fundamentos -->
-        <!-- alt es texto alternativo para accesibilidad o si la imagen no carga -->
-        <!-- width define el ancho de la imagen en píxeles -->
+        <figure>
+            <img src="Imagen2.jpg" alt="Imagen 2">
+            <figcaption>Imagen 2</figcaption>
+        </figure>
 
-        <img src="NIVEL-1-Fundamentos/imagen2.jpg" alt="Imagen 2" width="200">
-        <!-- Imagen 2 -->
-
-        <img src="NIVEL-1-Fundamentos/imagen3.jpg" alt="Imagen 3" width="200">
-        <!-- Imagen 3 -->
+        <figure>
+            <img src="Imagen3.jpg" alt="Imagen 3">
+            <figcaption>Imagen 3</figcaption>
+        </figure>
     </div>
-
 </body>
 </html>
