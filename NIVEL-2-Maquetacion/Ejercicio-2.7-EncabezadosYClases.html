@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!-- Declara que este documento es HTML5 -->
+
+<html lang="es">
+<!-- Etiqueta raíz del documento y define el idioma español -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Define la codificación de caracteres como UTF-8, permite acentos y caracteres especiales -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hace que la página sea responsive, se adapta al ancho de la pantalla del dispositivo -->
+
+    <title>Encabezados y Clases</title>
+    <!-- Título de la página que aparece en la pestaña del navegador -->
+
+    <style>
+        /* Estilos CSS internos para toda la página */
+
+        body {
+            font-family: Arial, sans-serif;
+            /* Tipografía principal de la página */
+            margin: 0; padding: 0;
+            /* Elimina márgenes y padding por defecto del navegador */
+            background-color: #f9f9f9;
+            /* Color de fondo de toda la página */
+            color: #333;
+            /* Color principal del texto */
+        }
+
+        header {
+            background-color: #4CAF50;
+            /* Color de fondo del encabezado */
+            color: white;
+            /* Color del texto en el encabezado */
+            text-align: center;
+            /* Centra el texto horizontalmente */
+            padding: 20px 0;
+            /* Espaciado arriba y abajo del encabezado */
+        }
+
+        main {
+            max-width: 900px;
+            /* Ancho máximo del contenido central */
+            margin: 20px auto;
+            /* Centra horizontalmente y separa 20px arriba y abajo */
+            padding: 0 20px;
+            /* Padding horizontal interno */
+        }
+
+        section {
+            background-color: white;
+            /* Fondo blanco para cada sección */
+            border-radius: 8px;
+            /* Bordes redondeados */
+            padding: 20px;
+            /* Espaciado interno de la sección */
+            margin: 15px 0;
+            /* Margen vertical entre secciones */
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            /* Sombra ligera para dar relieve */
+        }
+
+        /* Clases CSS para diferenciar colores de encabezados */
+        .h1-style { color: #ff6f3c; }
+        .h2-style { color: #4CAF50; }
+        .h3-style { color: #2196F3; }
+        .h4-style { color: #9C27B0; }
+        .h5-style { color: #FF9800; }
+        .h6-style { color: #607D8B; }
+
+        a {
+            color: #2196F3;
+            /* Color azul para enlaces */
+            text-decoration: none;
+            /* Sin subrayado por defecto */
+        }
+
+        a:hover {
+            text-decoration: underline;
+            /* Al pasar el mouse, subraya el enlace */
+        }
+
+        footer {
+            background-color: #4CAF50;
+            /* Fondo verde igual que el header */
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            /* Espaciado interno vertical */
+            margin-top: 40px;
+            /* Separación del contenido principal */
+        }
+
+        @media (max-width: 600px) {
+            section {
+                padding: 15px;
+                /* Reduce padding interno en pantallas pequeñas para mejor visualización */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Encabezados y Clases El Tigre</h1>
+        <!-- Encabezado principal de la página -->
+    </header>
+
+    <main>
+        <!-- Contenedor principal de contenido -->
+
+        <section class="h1-style">
+            <!-- Sección con clase que aplica color al H1 -->
+            <h1>Encabezado H1</h1>
+            <!-- Título principal más importante -->
+            <p>El H1 es el título más importante de la página.</p>
+            <!-- Breve explicación del H1 -->
+            <a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/Heading_Elements" target="_blank">Leer más</a>
+            <!-- Enlace externo con referencia y se abre en pestaña nueva -->
+        </section>
+
+        <section class="h2-style">
+            <h2>Encabezado H2</h2>
+            <p>Se utiliza para secciones principales bajo H1.</p>
+            <a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/Heading_Elements" target="_blank">Leer más</a>
+        </section>
+
+        <section class="h3-style">
+            <h3>Encabezado H3</h3>
+            <p>Subsecciones bajo H2.</p>
+            <a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/Heading_Elements" target="_blank">Leer más</a>
+        </section>
+
+        <section class="h4-style">
+            <h4>Encabezado H4</h4>
+            <p>Subsecciones bajo H3.</p>
+            <a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/Heading_Elements" target="_blank">Leer más</a>
+        </section>
+
+        <section class="h5-style">
+            <h5>Encabezado H5</h5>
+            <p>Subsecciones bajo H4.</p>
+            <a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/Heading_Elements" target="_blank">Leer más</a>
+        </section>
+
+        <section class="h6-style">
+            <h6>Encabezado H6</h6>
+            <p>Subsecciones bajo H5.</p>
+            <a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/Heading_Elements" target="_blank">Leer más</a>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Pie de página con contacto y derechos -->
+        <p>Contacto: info@eltigre.com | Tel: 555-4321</p>
+        <p>&copy; 2025 Encabezados y Clases El Tigre</p>
+    </footer>
+</body>
+</html>
