@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!-- Documento HTML5 -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- Codificación UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Página responsiva -->
+    <title>Divisiones HTML</title>
+
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0; padding: 0;
+            background-color: #f0f0f0; /* Fondo gris claro */
+            color: #333; /* Texto gris oscuro */
+        }
+
+        /* Encabezado */
+        header {
+            background-color: #ff6f3c; /* Fondo naranja */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Contenedor principal */
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        /* Bloques con clase */
+        .bloque {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra suave */
+        }
+
+        .bloque h2 {
+            color: #ff6f3c;
+            margin-bottom: 10px;
+        }
+
+        .bloque p {
+            line-height: 1.6;
+        }
+
+        .bloque a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .bloque a:hover {
+            text-decoration: underline;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #ff6f3c;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+
+        /* Responsividad */
+        @media (max-width: 600px) {
+            .bloque {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Divisiones HTML El Tigre</h1>
+    </header>
+
+    <main>
+        <!-- Bloque 1 -->
+        <div class="bloque">
+            <h2>Sección 1: Introducción a Divs</h2>
+            <p>Los <code>&lt;div&gt;</code> permiten agrupar contenido y aplicar estilos CSS fácilmente.</p>
+            <a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/div" target="_blank">Leer más</a>
+        </div>
+
+        <!-- Bloque 2 -->
+        <div class="bloque">
+            <h2>Sección 2: Organizando Layout</h2>
+            <p>Usando divs y clases podemos crear layouts flexibles y ordenados en la página web.</p>
+            <a href="https://www.w3schools.com/css/css_layout.asp" target="_blank">Leer más</a>
+        </div>
+
+        <!-- Bloque 3 -->
+        <div class="bloque">
+            <h2>Sección 3: Divs Responsivos</h2>
+            <p>Con media queries y divs podemos adaptar los bloques a cualquier tamaño de pantalla.</p>
+            <a href="https://developer.mozilla.org/es/docs/Learn/CSS/CSS_layout/Responsive_Design" target="_blank">Leer más</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>Contacto: info@eltigre.com | Tel: 555-8765</p>
+        <p>&copy; 2025 Divisiones HTML El Tigre</p>
+    </footer>
+</body>
+</html>
