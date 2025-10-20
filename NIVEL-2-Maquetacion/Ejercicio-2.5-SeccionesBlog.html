@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!-- Documento HTML5 -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- Codificación UTF-8 para acentos y caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Página responsiva -->
+    <title>Secciones Blog</title>
+
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif; /* Fuente principal */
+            margin: 0; padding: 0;
+            background-color: #f9f9f9; /* Fondo gris claro */
+            color: #333; /* Texto gris oscuro */
+        }
+
+        /* Encabezado */
+        header {
+            background-color: #ff6f3c; /* Fondo naranja */
+            color: white; /* Texto blanco */
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Contenido principal */
+        main {
+            max-width: 900px;
+            margin: 20px auto; /* Centrado */
+            padding: 0 20px;
+        }
+
+        /* Secciones/artículos */
+        section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra suave */
+        }
+
+        h2 {
+            color: #ff6f3c;
+            margin-bottom: 10px;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        /* Enlaces con hover */
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #ff6f3c;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+
+        /* Responsividad */
+        @media (max-width: 600px) {
+            section {
+                padding: 15px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Blog El Tigre</h1>
+    </header>
+
+    <main>
+        <!-- Artículo 1 -->
+        <section>
+            <h2>Artículo 1: Aprender HTML</h2>
+            <p>HTML es el lenguaje que estructura la web. Con él definimos títulos, párrafos, listas y mucho más.</p>
+            <a href="https://www.w3schools.com/html/" target="_blank">Leer más</a>
+        </section>
+
+        <!-- Artículo 2 -->
+        <section>
+            <h2>Artículo 2: Consejos de CSS</h2>
+            <p>CSS permite dar estilo a nuestras páginas: colores, fuentes, bordes y layouts responsivos.</p>
+            <a href="https://www.w3schools.com/css/" target="_blank">Leer más</a>
+        </section>
+
+        <!-- Artículo 3 -->
+        <section>
+            <h2>Artículo 3: Buenas prácticas de Maquetación</h2>
+            <p>Organizar el HTML de manera semántica facilita mantenimiento, lectura y escalabilidad del sitio.</p>
+            <a href="https://developer.mozilla.org/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started" target="_blank">Leer más</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contacto: blog@eltigre.com | Tel: 555-4321</p>
+        <p>&copy; 2025 Blog El Tigre</p>
+    </footer>
+</body>
+</html>
