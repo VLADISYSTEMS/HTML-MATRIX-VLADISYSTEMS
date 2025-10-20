@@ -1,0 +1,128 @@
+<!DOCTYPE html> <!-- Declara el documento como HTML5 -->
+<html lang="es"> <!-- Define el idioma español -->
+<head>
+    <meta charset="UTF-8"> <!-- Codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividad -->
+    <title>Portafolio Simple - Vladisystems</title> <!-- Título de la pestaña -->
+
+    <!-- Estilos internos CSS -->
+    <style>
+        /* Estilo general del cuerpo */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        /* Encabezado principal */
+        header {
+            background-color: #004080;
+            color: white;
+            text-align: center;
+            padding: 2em 0;
+        }
+        /* Sección principal: usa grid para organizar artículos */
+        section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px;
+        }
+        /* Tarjetas individuales de proyecto */
+        article {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.2s ease;
+        }
+        /* Animación hover: eleva la tarjeta */
+        article:hover {
+            transform: translateY(-5px);
+        }
+        /* Imágenes de los proyectos */
+        img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        /* Títulos de cada proyecto */
+        h3 {
+            margin-top: 10px;
+            color: #004080;
+        }
+        /* Botones de enlace */
+        a {
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: none;
+            background-color: #004080;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            transition: background 0.3s;
+        }
+        /* Efecto hover en botones */
+        a:hover {
+            background-color: #0066cc;
+        }
+        /* Pie de página */
+        footer {
+            text-align: center;
+            background-color: #222;
+            color: #ccc;
+            padding: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabecera principal -->
+    <header>
+        <h1>Portafolio Vladisystems</h1>
+        <p>Proyectos creados durante el Nivel 2 de Maquetación HTML</p>
+    </header>
+
+    <!-- Sección principal con tarjetas -->
+    <section>
+        <!-- Proyecto 1 -->
+        <article>
+            <img src="https://picsum.photos/400/200?random=1" alt="Ejercicio 2.5">
+            <h3>Ejercicio 2.5 – Secciones Blog</h3>
+            <p>Página con estructura de blog y enlaces funcionales.</p>
+            <a href="Ejercicio-2.5-SeccionesBlog.html" target="_blank">Ver proyecto</a>
+        </article>
+
+        <!-- Proyecto 2 -->
+        <article>
+            <img src="https://picsum.photos/400/200?random=2" alt="Ejercicio 2.6">
+            <h3>Ejercicio 2.6 – Divisiones HTML</h3>
+            <p>Uso de contenedores y divisiones para maquetar contenido.</p>
+            <a href="Ejercicio-2.6-DivisionesHTML.html" target="_blank">Ver proyecto</a>
+        </article>
+
+        <!-- Proyecto 3 -->
+        <article>
+            <img src="https://picsum.photos/400/200?random=3" alt="Ejercicio 2.7">
+            <h3>Ejercicio 2.7 – Encabezados y Clases</h3>
+            <p>Aplicación práctica de clases CSS y jerarquía de encabezados.</p>
+            <a href="Ejercicio-2.7-EncabezadosYClases.html" target="_blank">Ver proyecto</a>
+        </article>
+
+        <!-- Proyecto 4 -->
+        <article>
+            <img src="https://picsum.photos/400/200?random=4" alt="GitHub Vladisystems">
+            <h3>Repositorio GitHub</h3>
+            <p>Repositorio oficial de prácticas COBOL y HTML.</p>
+            <a href="https://github.com/VLADISYSTEMS" target="_blank">Ver en GitHub</a>
+        </article>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>© 2025 Vladisystems | Desarrollado por el Tigre 🐅</p>
+    </footer>
+</body>
+</html>
