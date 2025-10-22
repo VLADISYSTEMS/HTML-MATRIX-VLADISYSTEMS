@@ -1,0 +1,725 @@
+Ejercicio 3.3 – Encuesta de Opinión
+1️⃣ Objetivo del ejercicio
+
+Crear un formulario tipo encuesta donde los usuarios puedan opinar sobre un servicio o producto. Debe incluir:
+
+Nombre del usuario
+
+Correo electrónico
+
+Selección de satisfacción (radio buttons)
+
+Casillas de verificación (checkboxes) de aspectos que más le gustan
+
+Área de comentarios
+
+Botón de envío que valide los campos y muestre un resumen de la encuesta
+
+Se practica:
+
+Inputs text, email, radio, checkbox, textarea
+
+Validación básica con HTML (required)
+
+Interactividad con JavaScript para mostrar resultados
+
+Estilos CSS para presentación
+
+2️⃣ Semántica
+
+<form> → Contenedor del formulario
+
+<label> → Texto descriptivo de cada campo
+
+<input> → Campos de entrada (text, email, radio, checkbox)
+
+<textarea> → Campo de comentarios
+
+<button> → Botón de envío
+
+<div> → Contenedor para resultados y estilos
+
+3️⃣ Pseudocódigo
+Inicio EncuestaOpinion
+    Mostrar título "Encuesta de Opinión"
+    Crear formulario
+        Campo Nombre (texto, obligatorio)
+        Campo Correo (email, obligatorio)
+        Selección de satisfacción (radio, obligatorio)
+        Casillas de aspectos favoritos (checkbox, opcional)
+        Campo comentarios (textarea, opcional)
+        Botón Enviar
+    Al enviar
+        Validar campos obligatorios
+        Mostrar resumen de los datos ingresados debajo del formulario
+    Aplicar CSS para centrar y embellecer el formulario
+Fin EncuestaOpinion
+
+4️⃣ Script limpio con CSS y JavaScript
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Encuesta de Opinión</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    form {
+        background-color: #fff;
+        padding: 25px 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        width: 350px;
+    }
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    label {
+        display: block;
+        margin-top: 10px;
+    }
+    input, textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    .radio-group, .checkbox-group {
+        margin-top: 5px;
+    }
+    button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    #resultado {
+        margin-top: 20px;
+        padding: 15px;
+        background-color: #e7f3ff;
+        border-radius: 5px;
+        border: 1px solid #b3d7ff;
+    }
+</style>
+</head>
+<body>
+<form id="encuesta-form">
+    <h1>Encuesta de Opinión</h1>
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="email">Correo electrónico:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label>Satisfacción con el servicio:</label>
+    <div class="radio-group">
+        <input type="radio" id="satis1" name="satisfaccion" value="Muy satisfecho" required>
+        <label for="satis1">Muy satisfecho</label><br>
+        <input type="radio" id="satis2" name="satisfaccion" value="Satisfecho">
+        <label for="satis2">Satisfecho</label><br>
+        <input type="radio" id="satis3" name="satisfaccion" value="Neutral">
+        <label for="satis3">Neutral</label><br>
+        <input type="radio" id="satis4" name="satisfaccion" value="Insatisfecho">
+        <label for="satis4">Insatisfecho</label>
+    </div>
+
+    <label>Aspectos que más le gustaron:</label>
+    <div class="checkbox-group">
+        <input type="checkbox" id="aspecto1" name="aspectos" value="Calidad">
+        <label for="aspecto1">Calidad</label><br>
+        <input type="checkbox" id="aspecto2" name="aspectos" value="Rapidez">
+        <label for="aspecto2">Rapidez</label><br>
+        <input type="checkbox" id="aspecto3" name="aspectos" value="Atención">
+        <label for="aspecto3">Atención</label>
+    </div>
+
+    <label for="comentarios">Comentarios adicionales:</label>
+    <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+
+    <button type="submit">Enviar Encuesta</button>
+
+    <div id="resultado"></div>
+</form>
+
+<script>
+document.getElementById('encuesta-form').addEventListener('submit', function(e){
+    e.preventDefault(); // Evitar recarga de página
+
+    const nombre = document.getElementById('nombre').value;
+    const email = document.getElementById('email').value;
+    const satisfaccion = document.querySelector('input[name="satisfaccion"]:checked')?.value;
+    
+    const aspectos = Array.from(document.querySelectorAll('input[name="aspectos"]:checked'))
+                        .map(cb => cb.value)
+                        .join(', ');
+
+    const comentarios = document.getElementById('comentarios').value;
+
+    document.getElementById('resultado').innerHTML = `
+        <h3>Resumen de la Encuesta</h3>
+        <p><strong>Nombre:</strong> ${nombre}</p>
+        <p><strong>Correo:</strong> ${email}</p>
+        <p><strong>Satisfacción:</strong> ${satisfaccion}</p>
+        <p><strong>Aspectos favoritos:</strong> ${aspectos || 'Ninguno seleccionado'}</p>
+        <p><strong>Comentarios:</strong> ${comentarios || 'Sin comentarios'}</p>
+    `;
+});
+</script>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Encuesta de Opinión</title>
+<style>
+    /* Estilos generales del cuerpo */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    /* Formulario */
+    form {
+        background-color: #fff;
+        padding: 25px 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        width: 350px;
+    }
+    h1 { text-align: center; margin-bottom: 20px; }
+    label { display: block; margin-top: 10px; }
+    input, textarea { width: 100%; padding: 8px; margin-top: 5px; border-radius: 5px; border: 1px solid #ccc; }
+    .radio-group, .checkbox-group { margin-top: 5px; }
+    button { width: 100%; padding: 10px; margin-top: 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
+    button:hover { background-color: #0056b3; }
+    #resultado { margin-top: 20px; padding: 15px; background-color: #e7f3ff; border-radius: 5px; border: 1px solid #b3d7ff; }
+</style>
+</head>
+<body>
+<!-- Inicio del formulario -->
+<form id="encuesta-form">
+    <h1>Encuesta de Opinión</h1>
+
+    <!-- Nombre del usuario -->
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <!-- Correo electrónico -->
+    <label for="email">Correo electrónico:</label>
+    <input type="email" id="email" name="email" required>
+
+    <!-- Selección de satisfacción -->
+    <label>Satisfacción con el servicio:</label>
+    <div class="radio-group">
+        <input type="radio" id="satis1" name="satisfaccion" value="Muy satisfecho" required>
+        <label for="satis1">Muy satisfecho</label><br>
+        <input type="radio" id="satis2" name="satisfaccion" value="Satisfecho">
+        <label for="satis2">Satisfecho</label><br>
+        <input type="radio" id="satis3" name="satisfaccion" value="Neutral">
+        <label for="satis3">Neutral</label><br>
+        <input type="radio" id="satis4" name="satisfaccion" value="Insatisfecho">
+        <label for="satis4">Insatisfecho</label>
+    </div>
+
+    <!-- Casillas de aspectos favoritos -->
+    <label>Aspectos que más le gustaron:</label>
+    <div class="checkbox-group">
+        <input type="checkbox" id="aspecto1" name="aspectos" value="Calidad">
+        <label for="aspecto1">Calidad</label><br>
+        <input type="checkbox" id="aspecto2" name="aspectos" value="Rapidez">
+        <label for="aspecto2">Rapidez</label><br>
+        <input type="checkbox" id="aspecto3" name="aspectos" value="Atención">
+        <label for="aspecto3">Atención</label>
+    </div>
+
+    <!-- Comentarios -->
+    <label for="comentarios">Comentarios adicionales:</label>
+    <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+
+    <!-- Botón de envío -->
+    <button type="submit">Enviar Encuesta</button>
+
+    <!-- Contenedor para mostrar resultados -->
+    <div id="resultado"></div>
+</form>
+
+<script>
+/* -----------------------------
+JavaScript para mostrar un resumen de la encuesta al enviar
+----------------------------- */
+
+/* Seleccionamos el formulario por su ID 'encuesta-form' y le agregamos un evento */
+document.getElementById('encuesta-form').addEventListener('submit', function(e){
+    // e es el objeto del evento, contiene info del submit
+
+    e.preventDefault(); 
+    /* 
+    preventDefault() evita que el formulario se envíe al servidor
+    y que la página se recargue automáticamente. 
+    Esto nos permite manejar el envío con JavaScript.
+    */
+
+    /* Obtenemos el valor del campo de nombre */
+    const nombre = document.getElementById('nombre').value;
+    // .value toma el texto que el usuario escribió en el input
+
+    /* Obtenemos el valor del campo de correo electrónico */
+    const email = document.getElementById('email').value;
+
+    /* 
+    Obtenemos el valor del radio seleccionado (satisfacción)
+    querySelector selecciona el primer input que esté marcado con checked
+    'input[name="satisfaccion"]:checked' busca dentro de los radios
+    el que esté seleccionado
+    */
+    const satisfaccion = document.querySelector('input[name="satisfaccion"]:checked')?.value;
+    // ?.value es "optional chaining", si no hay ninguno seleccionado devuelve undefined
+
+    /* 
+    Obtenemos los valores de los checkboxes seleccionados
+    Array.from convierte la lista de nodos en un array para poder usar map
+    map extrae el valor de cada checkbox
+    join(', ') une todos los valores en una cadena separada por coma
+    */
+    const aspectos = Array.from(document.querySelectorAll('input[name="aspectos"]:checked'))
+                        .map(cb => cb.value)
+                        .join(', ');
+
+    /* Obtenemos el texto del textarea de comentarios */
+    const comentarios = document.getElementById('comentarios').value;
+
+    /* 
+    Insertamos dentro del div con ID 'resultado' un resumen en HTML
+    innerHTML reemplaza el contenido del div con el texto que construimos
+    usando template literals (``) para incluir variables dentro de HTML
+    */
+    document.getElementById('resultado').innerHTML = `
+        <h3>Resumen de la Encuesta</h3>
+        <p><strong>Nombre:</strong> ${nombre}</p>
+        <p><strong>Correo:</strong> ${email}</p>
+        <p><strong>Satisfacción:</strong> ${satisfaccion}</p>
+        <p><strong>Aspectos favoritos:</strong> ${aspectos || 'Ninguno seleccionado'}</p>
+        <p><strong>Comentarios:</strong> ${comentarios || 'Sin comentarios'}</p>
+    `;
+    /* 
+    ${variable || 'valor por defecto'} significa: si variable está vacía o undefined,
+    muestra 'valor por defecto'.
+    */
+});
+</script>
+</body>
+</html>
+
+
+
+🔹 Resumen de comandos y conceptos
+
+document.getElementById('id') → Selecciona un elemento del HTML por su ID.
+
+.addEventListener('submit', func) → “Escucha” el evento submit (clic en enviar) y ejecuta la función func.
+
+e.preventDefault() → Evita que la página se recargue cuando se envía el formulario.
+
+.value → Obtiene el contenido de un input o textarea.
+
+document.querySelector('selector') → Selecciona el primer elemento que coincide con el selector CSS.
+
+?.value → Operador opcional que evita errores si el elemento no existe.
+
+document.querySelectorAll('selector') → Selecciona todos los elementos que cumplen la condición y devuelve una NodeList.
+
+Array.from() → Convierte una NodeList en un array real para poder usar métodos como map().
+
+.map(cb => cb.value) → Recorre cada elemento del array y extrae su valor.
+
+.join(', ') → Une los elementos de un array en un string separados por comas.
+
+innerHTML = `` → Inserta contenido HTML dinámico dentro de un elemento.
+
+${variable} → Template literals para incrustar variables dentro de cadenas HTML.
+
+
+
+
+
+
+Vamos a hacer la versión ultra comentada, explicando cada símbolo, operador y línea, para que no te quede ninguna duda de cómo funciona este JS de la encuesta:
+
+<script>
+/* ==============================================
+   JavaScript ultra comentado para la Encuesta
+   ============================================== */
+
+/*
+  1️⃣ Seleccionamos el formulario completo usando su ID 'encuesta-form'
+  2️⃣ Agregamos un "listener" que ejecuta la función cada vez que el usuario hace submit (clic en Enviar)
+*/
+document.getElementById('encuesta-form')   // Devuelve el elemento HTML <form> con id="encuesta-form"
+.addEventListener('submit', function(e){  // 'submit' es el evento de enviar formulario
+                                           // La función se ejecuta cada vez que se envía
+                                           
+    e.preventDefault(); // ⚡ Evita la recarga automática de la página
+                        // Sin esto, el formulario se enviaría y la página se refrescaría
+
+    // =====================
+    // OBTENER DATOS DEL FORMULARIO
+    // =====================
+
+    // 1️⃣ Nombre del usuario
+    const nombre = document.getElementById('nombre').value;
+    // document.getElementById('nombre') → selecciona el input con id="nombre"
+    // .value → obtiene el texto que el usuario escribió
+
+    // 2️⃣ Correo electrónico
+    const email = document.getElementById('email').value;
+
+    // 3️⃣ Radio buttons (satisfacción)
+    const satisfaccion = document.querySelector(
+        'input[name="satisfaccion"]:checked'  // Selecciona el primer radio button marcado con name="satisfaccion"
+    )?.value;  // ?. → operador opcional, evita error si no hay ninguno seleccionado
+               // .value → devuelve el valor del radio seleccionado
+
+    // 4️⃣ Checkbox (aspectos favoritos)
+    const aspectos = Array.from(
+        document.querySelectorAll('input[name="aspectos"]:checked')  
+        // querySelectorAll devuelve todos los checkbox marcados con name="aspectos"
+    )
+    .map(cb => cb.value)   // map recorre cada checkbox y devuelve su valor
+    .join(', ');           // join une todos los valores en un string separado por comas
+
+    // 5️⃣ Comentarios adicionales
+    const comentarios = document.getElementById('comentarios').value;
+
+    // =====================
+    // MOSTRAR RESULTADOS EN PANTALLA
+    // =====================
+
+    document.getElementById('resultado').innerHTML = `
+        <h3>Resumen de la Encuesta</h3>
+        <p><strong>Nombre:</strong> ${nombre}</p>
+        <p><strong>Correo:</strong> ${email}</p>
+        <p><strong>Satisfacción:</strong> ${satisfaccion}</p>
+        <p><strong>Aspectos favoritos:</strong> ${aspectos || 'Ninguno seleccionado'}</p>
+        <p><strong>Comentarios:</strong> ${comentarios || 'Sin comentarios'}</p>
+    `;
+    /*
+        innerHTML → permite escribir contenido HTML dentro del div con id="resultado"
+        `${variable}` → template literal, permite insertar variables dentro de un string
+        || 'Texto' → operador OR; si la variable está vacía o undefined, muestra el texto por defecto
+    */
+
+}); // Fin de la función que maneja el submit
+</script>
+
+🔹 Explicación de los símbolos y operadores usados
+Símbolo/Operador	Qué hace
+document.getElementById('id')	Selecciona un elemento por su ID
+document.querySelector('selector')	Selecciona el primer elemento que coincide con el selector CSS
+document.querySelectorAll('selector')	Selecciona todos los elementos que coinciden, devuelve NodeList
+.value	Devuelve el contenido de un input o textarea
+?.	Operador opcional, evita errores si el elemento es null o undefined
+Array.from()	Convierte NodeList a un array real para usar métodos como map()
+.map(cb => cb.value)	Recorre un array y transforma cada elemento, aquí extrae los valores de checkboxes
+.join(', ')	Une los elementos de un array en un string, separados por comas
+`...${variable}...`	Template literals: permite mezclar HTML y variables dinámicamente
+`	
+e.preventDefault()	Evita que la acción predeterminada del evento (submit) ocurra, sin recargar la página
+.addEventListener('evento', func)	Ejecuta la función func cuando ocurre el evento en el elemento
+
+
+
+
+¡Perfecto, tigre! 😎 Entonces hacemos un diagrama textual paso a paso, tipo flujo escrito, para que se vea claramente cómo viaja la información del formulario al resumen, sin usar imágenes ni dibujos:
+
+Flujo de la Encuesta de Opinión (texto)
+
+1️⃣ Usuario ingresa datos en el formulario
+
+Nombre -> input#nombre
+Correo -> input#email
+Satisfacción -> input[name="satisfaccion"] (radio)
+Aspectos favoritos -> input[name="aspectos"] (checkbox)
+Comentarios -> textarea#comentarios
+
+
+2️⃣ Usuario hace clic en "Enviar" (submit)
+
+3️⃣ JavaScript intercepta el envío
+
+document.getElementById('encuesta-form').addEventListener('submit', function(e) {
+    e.preventDefault()  // Evita que la página se recargue
+
+
+4️⃣ JS captura los valores de cada campo
+
+const nombre = document.getElementById('nombre').value
+const email = document.getElementById('email').value
+const satisfaccion = document.querySelector('input[name="satisfaccion"]:checked')?.value
+const aspectos = Array.from(document.querySelectorAll('input[name="aspectos"]:checked'))
+                  .map(cb => cb.value)
+                  .join(', ')
+const comentarios = document.getElementById('comentarios').value
+
+
+5️⃣ JS prepara el resumen dinámico
+
+document.getElementById('resultado').innerHTML = `
+    <h3>Resumen de la Encuesta</h3>
+    <p>Nombre: ${nombre}</p>
+    <p>Correo: ${email}</p>
+    <p>Satisfacción: ${satisfaccion}</p>
+    <p>Aspectos favoritos: ${aspectos || 'Ninguno seleccionado'}</p>
+    <p>Comentarios: ${comentarios || 'Sin comentarios'}</p>
+`
+
+
+6️⃣ Pantalla muestra el resumen
+
+┌───────────────────────────────┐
+│      Resumen de la Encuesta   │
+│ Nombre: Juan Pérez            │
+│ Correo: juan@mail.com         │
+│ Satisfacción: Satisfecho      │
+│ Aspectos favoritos: Rapidez, Calidad │
+│ Comentarios: Todo excelente!  │
+└───────────────────────────────┘
+
+
+7️⃣ Todo sucede sin recargar la página
+
+e.preventDefault() evita refresco
+
+innerHTML actualiza el contenido del div #resultado
+
+Usuario ve resumen instantáneo
+
+Si quieres, tigre, puedo hacer el mismo flujo textual pero para el Ejercicio 3.2 – Registro de Usuario, incluyendo CSS y validaciones, así queda claro cómo funciona todo en ambos ejercicios.
+
+¿Quieres que haga ese flujo textual para el registro también?
+
+ChatGPT puede cometer errores. Considera verificar la i
+
+
+
+
+
+
+CORREGIDO :
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Encuesta de Opinión</title>
+<style>
+    /* Estilos generales del cuerpo */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        display: flex;
+        justify-content: center;
+        padding: 40px 0;
+        min-height: 100vh; /* no recorta el contenido */
+        overflow-y: auto;  /* permite hacer scroll si el form es largo */
+    }
+
+    /* Formulario */
+    form {
+        background-color: #fff;
+        padding: 25px 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        width: 100%;
+        max-width: 400px; /* límite para pantallas grandes */
+        box-sizing: border-box;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    label {
+        display: block;
+        margin-top: 12px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+    }
+
+    /* Radios y Checkboxes en línea */
+    .radio-group label,
+    .checkbox-group label {
+        display: inline-block;
+        margin-right: 10px;
+        font-weight: normal;
+    }
+
+    .radio-group input,
+    .checkbox-group input {
+        margin-right: 5px;
+        vertical-align: middle;
+    }
+
+    .radio-group,
+    .checkbox-group {
+        margin-top: 5px;
+        padding-left: 5px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        margin-top: 20px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: 0.2s ease;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    #resultado {
+        margin-top: 25px;
+        padding: 15px;
+        background-color: #e7f3ff;
+        border-radius: 5px;
+        border: 1px solid #b3d7ff;
+        color: #333;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+        form {
+            padding: 20px;
+            width: 90%;
+        }
+    }
+</style>
+</head>
+<body>
+<!-- Inicio del formulario -->
+<form id="encuesta-form">
+    <h1>Encuesta de Opinión</h1>
+
+    <!-- Nombre del usuario -->
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <!-- Correo electrónico -->
+    <label for="email">Correo electrónico:</label>
+    <input type="email" id="email" name="email" required>
+
+    <!-- Selección de satisfacción -->
+    <label>Satisfacción con el servicio:</label>
+    <div class="radio-group">
+        <input type="radio" id="satis1" name="satisfaccion" value="Muy satisfecho" required>
+        <label for="satis1">Muy satisfecho</label><br>
+        <input type="radio" id="satis2" name="satisfaccion" value="Satisfecho">
+        <label for="satis2">Satisfecho</label><br>
+        <input type="radio" id="satis3" name="satisfaccion" value="Neutral">
+        <label for="satis3">Neutral</label><br>
+        <input type="radio" id="satis4" name="satisfaccion" value="Insatisfecho">
+        <label for="satis4">Insatisfecho</label>
+    </div>
+
+    <!-- Casillas de aspectos favoritos -->
+    <label>Aspectos que más le gustaron:</label>
+    <div class="checkbox-group">
+        <input type="checkbox" id="aspecto1" name="aspectos" value="Calidad">
+        <label for="aspecto1">Calidad</label><br>
+        <input type="checkbox" id="aspecto2" name="aspectos" value="Rapidez">
+        <label for="aspecto2">Rapidez</label><br>
+        <input type="checkbox" id="aspecto3" name="aspectos" value="Atención">
+        <label for="aspecto3">Atención</label>
+    </div>
+
+    <!-- Comentarios -->
+    <label for="comentarios">Comentarios adicionales:</label>
+    <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+
+    <!-- Botón de envío -->
+    <button type="submit">Enviar Encuesta</button>
+
+   
+</form>
+
+<!-- 🔹 AHORA SÍ: el contenedor va DESPUÉS del form -->
+<div id="resultado"></div>
+
+<script>
+/* -----------------------------
+JavaScript para mostrar un resumen de la encuesta al enviar
+----------------------------- */
+
+// Seleccionamos el formulario y agregamos un evento al enviarlo
+document.getElementById('encuesta-form').addEventListener('submit', function(e){
+
+    e.preventDefault(); // Evita recargar la página
+
+    // Capturamos los valores de los campos
+    const nombre = document.getElementById('nombre').value;
+    const email = document.getElementById('email').value;
+    const satisfaccion = document.querySelector('input[name="satisfaccion"]:checked')?.value;
+    const aspectos = Array.from(document.querySelectorAll('input[name="aspectos"]:checked'))
+                          .map(cb => cb.value)
+                          .join(', ');
+    const comentarios = document.getElementById('comentarios').value;
+
+    // Mostramos el resultado en pantalla
+    document.getElementById('resultado').innerHTML = `
+        <h3>Resumen de la Encuesta</h3>
+        <p><strong>Nombre:</strong> ${nombre}</p>
+        <p><strong>Correo:</strong> ${email}</p>
+        <p><strong>Satisfacción:</strong> ${satisfaccion || 'Sin seleccionar'}</p>
+        <p><strong>Aspectos favoritos:</strong> ${aspectos || 'Ninguno seleccionado'}</p>
+        <p><strong>Comentarios:</strong> ${comentarios || 'Sin comentarios'}</p>
+    `;
+});
+</script>
+</body>
+</html>

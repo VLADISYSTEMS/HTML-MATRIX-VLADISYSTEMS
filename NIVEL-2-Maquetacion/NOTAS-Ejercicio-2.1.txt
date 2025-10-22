@@ -1,0 +1,158 @@
+1️⃣ Objetivo del ejercicio
+
+Crear una página web de noticias simple que muestre titulares, subtítulos, párrafos y enlaces, usando la estructura semántica de HTML para organizar correctamente la información y practicar la maquetación básica.
+
+2️⃣ Semántica
+
+<header>: Contiene el título principal de la página.
+
+<nav>: Menú de navegación (opcional en esta página simple).
+
+<main>: Contiene el contenido principal de las noticias.
+
+<article>: Cada noticia individual.
+
+<h1>, <h2>: Titulares y subtítulos.
+
+<p>: Párrafos de texto de la noticia.
+
+<a>: Enlaces a fuentes externas o relacionadas.
+
+<footer>: Información de pie de página.
+
+3️⃣ Pseudocódigo
+INICIO
+  CREAR página HTML
+    AGREGAR <header> con título "Noticias del Día"
+    AGREGAR <main>
+      PARA CADA noticia
+        CREAR <article>
+          AGREGAR <h2> como título de la noticia
+          AGREGAR <p> como contenido de la noticia
+          AGREGAR <a> para enlace externo
+      FIN PARA
+    AGREGAR <footer> con copyright
+FIN
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias del Día</title>
+</head>
+<body>
+    <header>
+        <h1>Noticias del Día</h1>
+    </header>
+
+    <main>
+        <article>
+            <h2>Titular de Noticia 1</h2>
+            <p>Resumen de la noticia número 1. Información importante y destacada.</p>
+            <a href="https://www.bbc.com/mundo" target="_blank">Leer más</a>
+        </article>
+
+        <article>
+            <h2>Titular de Noticia 2</h2>
+            <p>Resumen de la noticia número 2. Información importante y destacada.</p>
+            <a href="https://www.eltiempo.com" target="_blank">Leer más</a>
+        </article>
+
+        <article>
+            <h2>Titular de Noticia 3</h2>
+            <p>Resumen de la noticia número 3. Información importante y destacada.</p>
+            <a href="https://www.cnn.com" target="_blank">Leer más</a>
+        </article>
+
+        <article>
+            <h2>Titular de Noticia 4</h2>
+            <p>Resumen de la noticia número 4. Información importante y destacada.</p>
+            <a href="https://www.reuters.com" target="_blank">Leer más</a>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Noticias del Día</p>
+    </footer>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<!-- Declara el documento como HTML5 -->
+
+<html lang="es">
+<!-- Idioma de la página: español -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Codificación UTF-8 para soportar caracteres especiales y acentos -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hace la página responsiva: se adapta a móviles y tablets -->
+
+    <title>Noticias del Día</title>
+    <!-- Título que aparece en la pestaña del navegador -->
+</head>
+
+<body>
+    <header>
+        <!-- Encabezado principal de la página -->
+        <h1>Noticias del Día</h1>
+        <!-- Título visible en la página -->
+    </header>
+
+    <main>
+        <!-- Contenido principal de la página -->
+
+        <article>
+            <!-- Primer artículo de noticia -->
+            <h2>Titular de Noticia 1</h2>
+            <!-- Subtítulo o titular de la noticia -->
+
+            <p>Resumen de la noticia número 1. Información importante y destacada.</p>
+            <!-- Párrafo con un resumen de la noticia -->
+
+            <a href="https://www.bbc.com/mundo" target="_blank">Leer más</a>
+            <!-- Enlace real a la noticia completa
+                 href="URL" → dirección web
+                 target="_blank" → abre en nueva pestaña -->
+        </article>
+
+        <article>
+            <!-- Segundo artículo de noticia -->
+            <h2>Titular de Noticia 2</h2>
+            <p>Resumen de la noticia número 2. Información importante y destacada.</p>
+            <a href="https://www.eltiempo.com" target="_blank">Leer más</a>
+        </article>
+
+        <article>
+            <!-- Tercer artículo de noticia -->
+            <h2>Titular de Noticia 3</h2>
+            <p>Resumen de la noticia número 3. Información importante y destacada.</p>
+            <a href="https://www.cnn.com" target="_blank">Leer más</a>
+        </article>
+
+        <article>
+            <!-- Cuarto artículo de noticia -->
+            <h2>Titular de Noticia 4</h2>
+            <p>Resumen de la noticia número 4. Información importante y destacada.</p>
+            <a href="https://www.reuters.com" target="_blank">Leer más</a>
+        </article>
+
+    </main>
+
+    <footer>
+        <!-- Pie de página -->
+        <p>&copy; 2025 Noticias del Día</p>
+        <!-- Derechos de autor -->
+    </footer>
+</body>
+</html>
+
+
+

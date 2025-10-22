@@ -1,0 +1,294 @@
+1️⃣ Objetivo del ejercicio
+
+Crear una tabla de calificaciones de alumnos, con estilo CSS:
+
+Resaltar encabezados y filas alternas.
+
+Diseño limpio, legible y responsivo.
+
+Preparado para aplicar colores y bordes.
+
+2️⃣ Semántica
+
+<header> → Título de la página o institución.
+
+<main> → Contenido principal.
+
+<table> → Contenedor de la tabla.
+
+<thead> → Encabezado de la tabla (nombres de columnas).
+
+<tbody> → Cuerpo de la tabla con los datos de los alumnos.
+
+<tfoot> → Opcional, puede ser total o promedio.
+
+<footer> → Información de contacto o derechos.
+
+CSS:
+
+Bordes, color de fondo alterno, centrado de texto, padding.
+
+Responsivo básico.
+
+3️⃣ Pseudocódigo
+Iniciar HTML
+    Definir encabezado con nombre de la institución o curso
+    Crear sección principal
+        Crear tabla
+            Agregar fila de encabezado con nombres de columnas
+            Agregar filas de datos de alumnos con notas
+        Aplicar CSS:
+            Bordes y color de fondo para encabezado
+            Filas alternas con colores distintos
+            Texto centrado
+    Definir pie de página con contacto
+Fin
+
+4️⃣ Script limpio (HTML + CSS interno)
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Calificaciones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Quitar espacios entre bordes */
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            th, td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Calificaciones del Curso</h1>
+    </header>
+
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Alumno</th>
+                    <th>Matemáticas</th>
+                    <th>Lengua</th>
+                    <th>Ciencias</th>
+                    <th>Promedio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Juan Pérez</td>
+                    <td>90</td>
+                    <td>85</td>
+                    <td>92</td>
+                    <td>89</td>
+                </tr>
+                <tr>
+                    <td>María López</td>
+                    <td>78</td>
+                    <td>88</td>
+                    <td>85</td>
+                    <td>84</td>
+                </tr>
+                <tr>
+                    <td>Carlos Gómez</td>
+                    <td>95</td>
+                    <td>92</td>
+                    <td>98</td>
+                    <td>95</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>Contacto: escuela@eltigre.com | Tel: 555-9876</p>
+        <p>&copy; 2025 Escuela El Tigre</p>
+    </footer>
+</body>
+</html>
+
+5️⃣ Script documentado (HTML + CSS comentado)
+<!DOCTYPE html>
+<!-- Documento HTML5 -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- Codificación UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Página responsiva -->
+    <title>Tabla de Calificaciones</title>
+
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif; /* Fuente principal */
+            margin: 0; padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* Encabezado */
+        header {
+            background-color: #4CAF50; /* Verde */
+            color: white; /* Texto blanco */
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Contenido principal */
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        /* Tabla */
+        table {
+            width: 100%; /* Ocupa todo el ancho */
+            border-collapse: collapse; /* Quitar espacios entre bordes */
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra suave */
+        }
+
+        th, td {
+            padding: 12px; /* Espacio interno */
+            text-align: center; /* Texto centrado */
+            border-bottom: 1px solid #ddd; /* Línea divisoria */
+        }
+
+        th {
+            background-color: #4CAF50; /* Fondo verde */
+            color: white; /* Texto blanco */
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2; /* Filas alternas */
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+
+        /* Responsividad */
+        @media (max-width: 600px) {
+            th, td {
+                padding: 8px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Encabezado principal -->
+        <h1>Calificaciones del Curso</h1>
+    </header>
+
+    <main>
+        <!-- Tabla de calificaciones -->
+        <table>
+            <thead>
+                <!-- Encabezado de la tabla -->
+                <tr>
+                    <th>Alumno</th>
+                    <th>Matemáticas</th>
+                    <th>Lengua</th>
+                    <th>Ciencias</th>
+                    <th>Promedio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Filas con datos de alumnos -->
+                <tr>
+                    <td>Juan Pérez</td>
+                    <td>90</td>
+                    <td>85</td>
+                    <td>92</td>
+                    <td>89</td>
+                </tr>
+                <tr>
+                    <td>María López</td>
+                    <td>78</td>
+                    <td>88</td>
+                    <td>85</td>
+                    <td>84</td>
+                </tr>
+                <tr>
+                    <td>Carlos Gómez</td>
+                    <td>95</td>
+                    <td>92</td>
+                    <td>98</td>
+                    <td>95</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <!-- Pie de página con contacto y derechos -->
+        <p>Contacto: escuela@eltigre.com | Tel: 555-9876</p>
+        <p>&copy; 2025 Escuela El Tigre</p>
+    </footer>
+</body>
+</html>

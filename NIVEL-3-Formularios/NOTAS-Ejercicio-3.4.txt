@@ -1,0 +1,156 @@
+1️⃣ Objetivo del ejercicio
+
+Crear un formulario de inicio de sesión básico que permita al usuario ingresar usuario y contraseña, valide los campos obligatorios y muestre un mensaje de bienvenida o error sin recargar la página.
+
+2️⃣ Semántica
+
+<form> → Contenedor del formulario.
+
+<label> → Etiquetas de los campos.
+
+<input> → Campos de usuario y contraseña.
+
+<button> → Botón para enviar.
+
+<div id="mensaje"> → Contenedor para mostrar mensajes dinámicos (éxito o error).
+
+3️⃣ Pseudocódigo
+Inicio
+Mostrar formulario:
+    - Input Usuario
+    - Input Contraseña
+    - Botón Ingresar
+
+Al hacer clic en "Ingresar":
+    Capturar valores de Usuario y Contraseña
+    Si Usuario o Contraseña está vacío:
+        Mostrar mensaje: "Debe completar todos los campos"
+    Sino
+        Si Usuario == "admin" y Contraseña == "1234":
+            Mostrar mensaje: "Bienvenido, admin"
+        Sino
+            Mostrar mensaje: "Usuario o contraseña incorrectos"
+Fin
+
+4️⃣ Script limpio (HTML + CSS + JS)
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Básico</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f2f5;
+        display: flex;
+        justify-content: center;
+        padding: 40px 0;
+        min-height: 100vh;
+    }
+
+    form {
+        background-color: #fff;
+        padding: 25px 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        width: 100%;
+        max-width: 350px;
+        box-sizing: border-box;
+    }
+
+    h1 { text-align: center; margin-bottom: 20px; }
+    label { display: block; margin-top: 12px; font-weight: bold; }
+    input { width: 100%; padding: 8px; margin-top: 5px; border-radius: 5px; border: 1px solid #ccc; }
+    button {
+        width: 100%;
+        padding: 12px;
+        margin-top: 20px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.2s ease;
+    }
+    button:hover { background-color: #218838; }
+
+    #mensaje {
+        margin-top: 20px;
+        padding: 12px;
+        border-radius: 5px;
+        display: none;
+        font-weight: bold;
+    }
+    #mensaje.exito { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+    #mensaje.error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+</style>
+</head>
+<body>
+
+<form id="login-form">
+    <h1>Login Básico</h1>
+
+    <label for="usuario">Usuario:</label>
+    <input type="text" id="usuario" name="usuario" required>
+
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" name="password" required>
+
+    <button type="submit">Ingresar</button>
+</form>
+
+<div id="mensaje"></div>
+
+<script>
+document.getElementById('login-form').addEventListener('submit', function(e){
+    e.preventDefault(); // Evita recargar la página
+
+    const usuario = document.getElementById('usuario').value.trim();
+    const password = document.getElementById('password').value.trim();
+    const mensaje = document.getElementById('mensaje');
+
+    // Validación campos vacíos
+    if(!usuario || !password){
+        mensaje.textContent = "Debe completar todos los campos";
+        mensaje.className = "error";
+        mensaje.style.display = "block";
+        return;
+    }
+
+    // Validación login
+    if(usuario === "admin" && password === "1234"){
+        mensaje.textContent = `Bienvenido, ${usuario}`;
+        mensaje.className = "exito";
+    } else {
+        mensaje.textContent = "Usuario o contraseña incorrectos";
+        mensaje.className = "error";
+    }
+
+    mensaje.style.display = "block";
+});
+</script>
+
+</body>
+</html>
+
+5️⃣ Script documentado línea por línea
+
+document.getElementById('login-form') → selecciona el formulario.
+
+.addEventListener('submit', function(e){ ... }) → ejecuta la función cuando se envía el formulario.
+
+e.preventDefault() → evita que el formulario recargue la página.
+
+.trim() → elimina espacios al inicio y al final del input.
+
+Validación vacíos → muestra mensaje de error si algún campo está vacío.
+
+Validación login → compara usuario y contraseña con valores “admin / 1234”.
+
+mensaje.textContent → escribe el mensaje en el div.
+
+mensaje.className → aplica estilos CSS de error o éxito.
+
+mensaje.style.display = "block" → muestra el div oculto.

@@ -37,3 +37,84 @@ v
 - Local: editar archivos en VS Code
 - Git: add → commit → push
 - GitHub Pages se actualiza automáticamente
+
+
+
+🔹 Paso 1: Ver qué archivos han cambiado
+
+Desde la carpeta raíz:
+
+git status
+
+
+Te mostrará algo como:
+
+Changes not staged for commit:
+  modified:   NIVEL-2-Maquetacion/Ejercicio-2.1-PaginaNoticias/PaginaNoticias.html
+  modified:   otro-ejercicio.html
+
+
+Solo los archivos listados aquí se subirán si los agregas.
+
+🔹 Paso 2: Agregar solo los archivos que quieres
+
+Si solo quieres subir el Ejercicio 2.1:
+
+git add "NIVEL-2-Maquetacion/Ejercicio-2.1-PaginaNoticias/*"
+
+
+Esto agrega todos los archivos dentro de esa carpeta, pero nada más.
+
+💡 Nota: el * significa “todos los archivos de esa carpeta”.
+
+🔹 Paso 3: Hacer commit
+git commit -m "Actualizar Ejercicio 2.1 - Página Noticias NIVEL-2"
+
+🔹 Paso 4: Subir los cambios
+git push origin main
+
+
+Si es la primera vez después de un commit nuevo, usa:
+
+git push -u origin main
+
+
+✅ Con este método:
+
+Nunca tocarás otras carpetas ni archivos.
+
+Solo subes lo que realmente editaste.
+
+Evitas errores de rutas y de archivos fantasma.
+
+
+
+
+
+✅ La forma correcta de agregarlo es así:
+
+Desde la raíz del proyecto:
+
+git add "NIVEL-2-Maquetacion/Ejercicio-2.2-MenuRestaurante.html"
+
+
+Solo agregas el archivo, no la carpeta.
+
+Luego haces:
+
+git commit -m "Agregar Ejercicio 2.2 – Menú Restaurante con CSS"
+git push origin main
+
+
+
+
+# 1️⃣ Agregar el archivo al staging
+git add "NIVEL-2-Maquetacion/Ejercicio-2.3-FichaProducto.html"
+
+# 2️⃣ Hacer commit con mensaje descriptivo
+git commit -m "Agregar Ejercicio 2.3 Ficha de Producto con CSS"
+
+# 3️⃣ Subir cambios al repositorio remoto en GitHub
+git push origin main
+
+

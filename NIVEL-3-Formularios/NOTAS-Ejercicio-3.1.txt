@@ -1,0 +1,128 @@
+2️⃣ Semántica
+
+<form> → Contenedor del formulario.
+
+<label> → Texto descriptivo asociado a cada campo.
+
+<input> → Campos de entrada de datos (nombre, correo, asunto).
+
+<textarea> → Campo para mensajes largos.
+
+<button> → Botón de envío.
+
+<fieldset> y <legend> → Agrupar campos relacionados (opcional para accesibilidad).
+
+3️⃣ Pseudocódigo
+Inicio FormularioContacto
+    Mostrar título "Formulario de Contacto"
+    Crear formulario
+        Crear campo Nombre (texto, obligatorio)
+        Crear campo Email (correo, obligatorio)
+        Crear campo Asunto (texto, opcional)
+        Crear campo Mensaje (textarea, obligatorio)
+        Crear botón Enviar
+    Fin formulario
+Fin FormularioContacto
+
+4️⃣ Script limpio
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+</head>
+<body>
+    <h1>Formulario de Contacto</h1>
+    <form action="#" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="asunto">Asunto:</label>
+        <input type="text" id="asunto" name="asunto">
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
+
+5️⃣ Script documentado
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+</head>
+<body>
+    <!-- Título principal de la página -->
+    <h1>Formulario de Contacto</h1>
+
+    <!-- Inicio del formulario -->
+    <form action="#" method="post">
+        <!-- Campo de nombre -->
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <!-- "required" asegura que el usuario no deje este campo vacío -->
+
+        <!-- Campo de correo electrónico -->
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+        <!-- "type=email" valida automáticamente que el formato sea correcto -->
+
+        <!-- Campo de asunto -->
+        <label for="asunto">Asunto:</label>
+        <input type="text" id="asunto" name="asunto">
+        <!-- Campo opcional, el usuario puede dejarlo vacío -->
+
+        <!-- Campo de mensaje -->
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+        <!-- "textarea" para textos largos -->
+
+        <!-- Botón de envío -->
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
+
+
+✅ Listo, tigre! Primer formulario completo y limpio.
+
+Si quieres, podemos pasar al Ejercicio 3.2 – Registro de Usuario y seguir exactamente el mismo flujo, para que tu carpeta NIVEL-3 quede impecable.
+
+¿Vamos con el siguiente ya?
+
+Tú dijiste:
+listo tigre ya abrio en la www....peeeeeerooooo llene los campos y :::?
+ChatGPT Plus
+
+¡Ahhh, tigre! 😎 Eso era lo que esperaba que pasara… aquí viene la explicación:
+
+En el formulario que hicimos, el action="#" y el method="post" no tienen a dónde enviar los datos todavía. Por eso, cuando llenas los campos y le das a Enviar, no pasa nada “visible”:
+
+action="#" → significa “enviar al mismo HTML”, pero como no hay código backend, no hace nada.
+
+No hay ningún servidor ni script que reciba los datos.
+
+Si quieres ver algo que pase al darle enviar, tenemos varias opciones:
+
+Solo mostrar alerta en la página con JavaScript (ideal para práctica):
+
+<form id="contacto-form">
+    ...
+    <button type="submit">Enviar</button>
+</form>
+
+<script>
+document.getElementById('contacto-form').addEventListener('submit', function(e){
+    e.preventDefault(); // Evita que la página se recargue
+    alert("¡Formulario enviado correctamente!\nGracias por contactarnos, tigre.");
+});
+</script>
