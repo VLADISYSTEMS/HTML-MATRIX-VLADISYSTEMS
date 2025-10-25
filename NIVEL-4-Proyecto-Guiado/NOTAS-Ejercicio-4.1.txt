@@ -1,0 +1,280 @@
+🧠 OBJETIVO
+
+Construir la página de inicio corporativa de Vladisystems con un diseño profesional, encabezado con logo externo, menú de navegación, hero principal, tarjetas de servicios y pie de página.
+Este archivo formará parte del proyecto guiado nivel 4, funcionando como la base visual y semántica para los demás módulos del sitio.
+
+💬 SEMÁNTICA
+
+La estructura HTML sigue este orden jerárquico:
+
+<html>
+ ├── <head> → Configuración, título y estilos CSS
+ └── <body>
+      ├── <header> → Logo y menú
+      ├── <div class="hero"> → Bienvenida visual
+      ├── <section> → Servicios ofrecidos
+      └── <footer> → Derechos reservados
+
+🧾 PSEUDOCÓDIGO
+INICIAR documento HTML5
+DEFINIR idioma español
+CREAR cabecera con metadatos y estilos
+MOSTRAR encabezado con logo (fuera de carpeta actual)
+CREAR menú de navegación horizontal
+MOSTRAR sección principal tipo “hero”
+CREAR tres tarjetas informativas de servicios
+FINALIZAR con pie de página institucional
+TERMINAR documento
+
+💻 SCRIPT SIN COMENTARIOS (limpio)
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vladisystems | Inicio</title>
+    <style>
+        body {font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;margin:0;padding:0;background-color:#f9f9f9;color:#333;}
+        header {background-color:#00264d;color:white;padding:20px 40px;display:flex;align-items:center;justify-content:space-between;}
+        header img {height:60px;}
+        nav a {color:white;text-decoration:none;margin:0 15px;font-weight:500;}
+        nav a:hover {color:#00ccff;}
+        .hero {text-align:center;padding:80px 20px;background:linear-gradient(to right,#004080,#0073e6);color:white;}
+        .hero h1 {font-size:2.8em;margin-bottom:10px;}
+        .hero p {font-size:1.2em;margin-bottom:25px;}
+        .hero button {background-color:white;color:#004080;border:none;padding:12px 25px;font-size:1em;border-radius:5px;cursor:pointer;}
+        .hero button:hover {background-color:#00ccff;color:white;}
+        section {padding:60px 40px;max-width:1000px;margin:auto;}
+        section h2 {text-align:center;color:#004080;margin-bottom:30px;}
+        .cards {display:flex;justify-content:space-around;flex-wrap:wrap;gap:20px;}
+        .card {background:white;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,0.1);padding:20px;width:280px;text-align:center;}
+        .card h3 {color:#004080;}
+        footer {background-color:#00264d;color:white;text-align:center;padding:20px;margin-top:40px;}
+        footer p {margin:0;font-size:0.9em;}
+    </style>
+</head>
+<body>
+    <header>
+        <img src="../logo-vladisystems.png" alt="Logo Vladisystems">
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Nosotros</a>
+            <a href="#">Servicios</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Bienvenido a Vladisystems</h1>
+        <p>Innovación, tecnología y soluciones inteligentes para tu negocio.</p>
+        <button>Conoce más</button>
+    </div>
+
+    <section>
+        <h2>Nuestros Servicios</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Desarrollo Web</h3>
+                <p>Diseñamos sitios modernos, rápidos y optimizados para impulsar tu presencia digital.</p>
+            </div>
+            <div class="card">
+                <h3>Automatización con IA</h3>
+                <p>Integramos inteligencia artificial para simplificar tareas y aumentar productividad.</p>
+            </div>
+            <div class="card">
+                <h3>Consultoría Técnica</h3>
+                <p>Más de 30 años de experiencia al servicio de tus proyectos tecnológicos.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Vladisystems. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+
+📘 SCRIPT TOTALMENTE DOCUMENTADO LÍNEA POR LÍNEA
+<!DOCTYPE html> <!-- Indica al navegador que el documento usa HTML5 -->
+<html lang="es"> <!-- Define el idioma principal del documento -->
+<head>
+    <meta charset="UTF-8"> <!-- Asegura la correcta codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Permite que la página se vea bien en móviles -->
+    <title>Vladisystems | Inicio</title> <!-- Título que aparecerá en la pestaña del navegador -->
+
+    <!-- Estilos CSS internos -->
+    <style>
+        /* ====== ESTILO GLOBAL ====== */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente moderna y legible */
+            margin: 0; /* Quita márgenes por defecto */
+            padding: 0; /* Quita rellenos por defecto */
+            background-color: #f9f9f9; /* Color de fondo general */
+            color: #333; /* Color base del texto */
+        }
+
+        /* ====== ENCABEZADO ====== */
+        header {
+            background-color: #00264d; /* Azul oscuro corporativo */
+            color: white; /* Texto blanco para contraste */
+            padding: 20px 40px; /* Espaciado interno */
+            display: flex; /* Flexbox para organizar elementos en fila */
+            align-items: center; /* Centra verticalmente */
+            justify-content: space-between; /* Logo a la izquierda, menú a la derecha */
+        }
+
+        header img {
+            height: 60px; /* Tamaño del logo */
+        }
+
+        /* ====== MENÚ DE NAVEGACIÓN ====== */
+        nav a {
+            color: white; /* Enlaces en blanco */
+            text-decoration: none; /* Sin subrayado */
+            margin: 0 15px; /* Espaciado entre enlaces */
+            font-weight: 500; /* Peso medio */
+        }
+
+        nav a:hover {
+            color: #00ccff; /* Cambia color al pasar el mouse */
+        }
+
+        /* ====== SECCIÓN PRINCIPAL (HERO) ====== */
+        .hero {
+            text-align: center; /* Centra el contenido */
+            padding: 80px 20px; /* Espaciado grande */
+            background: linear-gradient(to right, #004080, #0073e6); /* Fondo degradado */
+            color: white; /* Texto blanco */
+        }
+
+        .hero h1 {
+            font-size: 2.8em; /* Título grande */
+            margin-bottom: 10px; /* Espacio inferior */
+        }
+
+        .hero p {
+            font-size: 1.2em; /* Subtítulo mediano */
+            margin-bottom: 25px; /* Espaciado inferior */
+        }
+
+        .hero button {
+            background-color: white; /* Botón blanco */
+            color: #004080; /* Texto azul */
+            border: none; /* Sin borde */
+            padding: 12px 25px; /* Tamaño del botón */
+            font-size: 1em; /* Tamaño del texto */
+            border-radius: 5px; /* Bordes redondeados */
+            cursor: pointer; /* Cambia cursor al pasar encima */
+        }
+
+        .hero button:hover {
+            background-color: #00ccff; /* Cambia a celeste */
+            color: white; /* Texto blanco */
+        }
+
+        /* ====== SECCIONES GENERALES ====== */
+        section {
+            padding: 60px 40px; /* Espaciado interno */
+            max-width: 1000px; /* Ancho máximo */
+            margin: auto; /* Centrado horizontal */
+        }
+
+        section h2 {
+            text-align: center; /* Centra el título */
+            color: #004080; /* Azul corporativo */
+            margin-bottom: 30px; /* Espaciado inferior */
+        }
+
+        /* ====== TARJETAS DE SERVICIO ====== */
+        .cards {
+            display: flex; /* Organiza tarjetas en fila */
+            justify-content: space-around; /* Distribuye con espacio */
+            flex-wrap: wrap; /* Permite que bajen si no caben */
+            gap: 20px; /* Espacio entre tarjetas */
+        }
+
+        .card {
+            background: white; /* Fondo blanco */
+            border-radius: 10px; /* Bordes redondeados */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra suave */
+            padding: 20px; /* Espaciado interno */
+            width: 280px; /* Ancho fijo */
+            text-align: center; /* Centrado del texto */
+        }
+
+        .card h3 {
+            color: #004080; /* Azul corporativo */
+        }
+
+        /* ====== PIE DE PÁGINA ====== */
+        footer {
+            background-color: #00264d; /* Azul oscuro */
+            color: white; /* Texto blanco */
+            text-align: center; /* Centrado */
+            padding: 20px; /* Espaciado */
+            margin-top: 40px; /* Separación superior */
+        }
+
+        footer p {
+            margin: 0; /* Sin margen */
+            font-size: 0.9em; /* Texto pequeño */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Encabezado con logo (fuera de carpeta actual, por eso se usa ../) -->
+    <header>
+        <img src="../logo-vladisystems.png" alt="Logo Vladisystems">
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Nosotros</a>
+            <a href="#">Servicios</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Sección principal -->
+    <div class="hero">
+        <h1>Bienvenido a Vladisystems</h1>
+        <p>Innovación, tecnología y soluciones inteligentes para tu negocio.</p>
+        <button>Conoce más</button>
+    </div>
+
+    <!-- Sección de servicios -->
+    <section>
+        <h2>Nuestros Servicios</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Desarrollo Web</h3>
+                <p>Diseñamos sitios modernos, rápidos y optimizados para impulsar tu presencia digital.</p>
+            </div>
+            <div class="card">
+                <h3>Automatización con IA</h3>
+                <p>Integramos inteligencia artificial para simplificar tareas y aumentar productividad.</p>
+            </div>
+            <div class="card">
+                <h3>Consultoría Técnica</h3>
+                <p>Más de 30 años de experiencia al servicio de tus proyectos tecnológicos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>© 2025 Vladisystems. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+
+
+📂 Ruta final de archivos:
+
+C:\Users\Vladimir\Desktop\HTML-MATRIX-VLADISYSTEMS\
+│
+├── logo-vladisystems.png
+└── NIVEL-4-Proyecto-Guiado\
+      ├── Proyecto-4.1-Home.html  ✅
+      ├── Proyecto-4.2-Nosotros.html
+      ├── Proyecto-4.3-Servicios.html
+      └── Proyecto-4.4-Contacto.html

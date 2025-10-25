@@ -118,3 +118,15 @@ git commit -m "Agregar Ejercicio 2.3 Ficha de Producto con CSS"
 git push origin main
 
 
+
+
+
+
+
+otra forma: 
+
+git add .
+git commit -m "Actualizar todos los ejercicios y notas del proyecto HTML-MATRIX"
+git push
+
+
