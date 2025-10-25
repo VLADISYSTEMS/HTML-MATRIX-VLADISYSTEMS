@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Vladisystems</title>
+
+  <style>
+    /* ======== ESTILOS GENERALES ======== */
+    body {
+      font-family: Arial, sans-serif; /* Fuente simple y profesional */
+      margin: 0;
+      background-color: #f4f4f4; /* Fondo gris claro */
+    }
+
+    header {
+      background-color: #002b5b; /* Azul oscuro corporativo */
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    header img {
+      width: 150px; /* Tamaño del logo */
+    }
+
+    nav {
+      background-color: #00509e;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ffd500; /* Amarillo al pasar el ratón */
+    }
+
+    main {
+      padding: 40px;
+      background-color: white;
+      max-width: 800px;
+      margin: 30px auto;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #002b5b;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input, textarea {
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #00509e;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #003f7f;
+    }
+
+    footer {
+      background-color: #002b5b;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      margin-top: 40px;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- ======== HEADER ======== -->
+  <header>
+    <img src="../logo-vladisystems.png" alt="Logo Vladisystems">
+    <h1>Vladisystems</h1>
+    <p>Soluciones tecnológicas e inmobiliarias con servicios locativos, impulsadas por IA</p>
+  </header>
+
+  <!-- ======== MENÚ DE NAVEGACIÓN ======== -->
+  <nav>
+    <a href="Proyecto-4.1-Home.html">Inicio</a>
+    <a href="Proyecto-4.2-Nosotros.html">Nosotros</a>
+    <a href="Proyecto-4.3-Servicios.html">Servicios</a>
+    <a href="Proyecto-4.4-Contacto.html">Contacto</a>
+  </nav>
+
+  <!-- ======== CUERPO PRINCIPAL ======== -->
+  <main>
+    <h2>Contáctanos</h2>
+    <p>¿Tienes alguna pregunta o proyecto en mente? Escríbenos y te responderemos lo antes posible.</p>
+
+    <form>
+      <label for="nombre">Nombre completo</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre..." required>
+
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="email" placeholder="tu@correo.com" required>
+
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+      <button type="submit">Enviar mensaje</button>
+    </form>
+  </main>
+
+  <!-- ======== PIE DE PÁGINA ======== -->
+  <footer>
+    <p>&copy; 2025 Vladisystems | Todos los derechos reservados</p>
+  </footer>
+
+</body>
+</html>
