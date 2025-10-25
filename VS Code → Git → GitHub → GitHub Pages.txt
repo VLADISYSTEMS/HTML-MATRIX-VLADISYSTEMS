@@ -130,3 +130,97 @@ git commit -m "Actualizar todos los ejercicios y notas del proyecto HTML-MATRIX"
 git push
 
 
+
+
+
+
+
+🧭 1️⃣ Ubicación correcta
+
+Abre tu terminal dentro de la carpeta raíz del proyecto:
+
+cd "C:\Users\Vladimir\Desktop\HTML-MATRIX-VLADISYSTEMS"
+
+
+Verifica que estás ahí con:
+
+dir
+
+
+Deberías ver tu logo y las subcarpetas (NIVEL-1-Fundamentos, NIVEL-4-Proyecto-Guiado, etc.)
+
+⚙️ 2️⃣ Inicializar Git (si aún no lo has hecho)
+
+Solo la primera vez:
+
+git init
+
+
+Esto crea una carpeta oculta .git donde se guarda el historial.
+
+🧩 3️⃣ Conectar tu repositorio remoto (solo una vez)
+
+Si ya tienes tu repo creado en GitHub, por ejemplo
+👉 https://github.com/VLADISYSTEMS/html-matrix-vladisystems.git
+
+Entonces conectas así:
+
+git remote add origin https://github.com/VLADISYSTEMS/html-matrix-vladisystems.git
+
+
+Si ya existía un origin, puedes cambiarlo con:
+
+git remote set-url origin https://github.com/VLADISYSTEMS/html-matrix-vladisystems.git
+
+🧱 4️⃣ Agregar los cambios nuevos
+git add .
+
+
+Ese punto . significa “todo lo nuevo y modificado”.
+
+📝 5️⃣ Confirmar el cambio (commit)
+git commit -m "Añadido Proyecto-4.1-Home.html con diseño corporativo Vladisystems"
+
+
+(Usa comillas normales, no tipográficas, por si acaso.)
+
+🚀 6️⃣ Subir al repositorio remoto (GitHub)
+
+Si es la primera vez que subes:
+
+git branch -M main
+
+
+Y luego:
+
+git push -u origin main
+
+
+Si ya lo habías subido antes, solo haces:
+
+git push
+
+💥 7️⃣ Verificar en GitHub
+
+Ve a tu navegador y abre:
+
+https://github.com/VLADISYSTEMS/html-matrix-vladisystems
+
+
+Ahí deberías ver la carpeta NIVEL-4-Proyecto-Guiado/ con tu Proyecto-4.1-Home.html 🎯
+
+🧠 OPCIONAL (para dejarlo publicado en la web)
+
+Si quieres que se vea online como página, activa GitHub Pages:
+
+Entra a tu repo en GitHub
+
+Ve a Settings → Pages
+
+En “Source”, elige la rama main y carpeta /root
+
+Guarda → GitHub te da una URL tipo:
+
+https://vladisystems.github.io/html-matrix-vladisystems/
+
+
